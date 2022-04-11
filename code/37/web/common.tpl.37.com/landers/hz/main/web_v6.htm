@@ -1,0 +1,298 @@
+{{include file="./header_v6.htm"}}
+{{game_flashes name='flashConfig' action_ids='161,162,163'}}
+{{data_content key='gb_hot_games' site_id='s_www' name='gb_hot_games'}}
+{{data_content key='gb_rec_games' site_id='s_www' name='gb_rec_games'}}
+{{data_content key='box_index_recomm_game' site_id='s_www' name='box_index_recomm_game'}}
+{{data_content key='gb_index_shouyou' site_id='s_www' name='gb_index_shouyou'}}
+<div class="g-main fl" id="gMain">
+            <div class="web-kv" id="webKv">
+                <div class="kv-img">
+                    <ul>
+                        {{data_content key='gamebox_web_kv' site_id='s_www' name='list' limit=6}}
+                        {{foreach $list.data as $item}}
+                        {{if $item.link}}
+                        <li>
+                            <a href="{{$item.link}}" target="_blank" data-position='{"e5":"37_box_v6_web_kv_{{$item@iteration}}","e9":"{{$item.game_id}}","e13":"{{$item.photo_bid}}"}'>
+                                <img src="{{$item.img}}" alt="{{$item.title}}">
+                            </a>
+                        </li>
+                        {{else}}
+                        <li>
+                            <a class="kv-jump" href="javascript:;" data-category="{{$game_data[$item.game_id].CATEGORY}}" data-ctype="{{$game_data[$item.game_id].CTYPE}}" data-gameid="{{$item.game_id}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-name="{{$game_data[$item.game_id].NAME}}" data-position='{"e5":"37_box_v6_web_kv_{{$item@iteration}}","e9":"{{$item.game_id}}","e13":"{{$item.photo_bid}}"}'>
+                                <img src="{{$item.img}}" alt="{{$item.title}}">
+                            </a>
+                        </li>
+                        {{/if}}
+                        {{/foreach}}
+                    </ul>
+                </div>
+                <div class="kv-num">
+                    <ul>
+                        {{foreach $list.data as $item}}
+                        <li>
+                            <i>
+                                <img width="100%" src="//img1.37wanimg.com/www/images/sets/{{$game_data[$item.game_id].GAME_KEY}}/80x80.png" alt="">
+                            </i>
+                            <h3>{{$game_data[$item.game_id].NAME}}</h3>
+                        </li>
+                        {{/foreach}}
+                    </ul>
+                </div>
+            </div>
+            <div class="web-cont clearfix">
+                <div class="m-hotgames-v6">
+                    <dl>
+                        <dt>
+                            <!-- <a href="javascript:;" class="more fr" id="hotMore">更多 >></a> -->
+                            <span class="title1"><i></i>精品游戏</span>
+                        </dt>
+                        <dd>
+                            <!-- 旧版页游 -->
+                            <!-- <div class="loading">
+                                <img src="http://img1.37wanimg.com/www/css/images/game_helper/loading.gif" alt="">
+                            </div>
+                            <div class="m-hot-list clearfix hide" id="hotGames"></div> -->
+    
+                            <!-- v6热门页游 -->
+                            <div class="loading hide">
+                                <img src="http://img1.37wanimg.com/www/css/images/game_helper/loading.gif" alt="">
+                            </div>
+                            <div class="m-hot-list2 clearfix" id="hotGamesV6">
+                                <ul class="clearfix">
+                                    {{data_content key='gamebox_web_boutique' site_id='s_www' name='list'}}
+                                    {{foreach $list.data as $k => $item}}
+                                    {{if $k<12}}
+                                    <li data-category="{{$game_data[$item.game_id].CATEGORY}}" data-ctype="{{$game_data[$item.game_id].CTYPE}}" data-gameid="{{$item.game_id}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-name="{{$game_data[$item.game_id].NAME}}" data-position='{"e5":"37_box_v6_web_list_{{$item@iteration}}","e9":"{{$item.game_id}}","e13":"{{$item.photo_bid}}"}'>
+                                        <div class="pic">
+                                            <img src="{{$item.img}}" alt="">
+                                        </div>
+                                        <div class="intro">
+                                            <div class="title">{{$game_data[$item.game_id].NAME}}</div>
+                                            <div class="sub">{{$game_data[$item.game_id].CHARACTERISTIC|truncate:10}}</div>
+                                            <i class="btn-start2">开始游戏</i>
+                                        </div>
+                                    </li>
+                                    {{/if}}
+                                    {{/foreach}}
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                    {{if count($list.data)>12}}
+                    <div class="w-more">
+                        <a href="//landers.37.com/index.php?c=hz-main&a=search_v6" target="_blank" id="hotMoreV6">更多游戏+</a>
+                    </div>
+                    {{/if}}
+                </div>
+                <div class="w-serverlist">
+                    <div class="w-title">
+                        <i></i>
+                        页游开服表
+                    </div>
+                    <div class="serverlist-container" id="serverListV6">
+                        <div class="serverlist-hd">
+                            <span class="focus">新服预告</span> I <span>已开新服</span>
+                        </div>
+                        <div class="serverlist-bd">
+                            {{data_game_list name='_game_list'}}
+                            <div class="pannel">
+                                {{data_newest_server_list category=1 limit=14 page_size=7 name='list' state=1 time_order="asc"}}
+                                {{foreach from=$list item=list2 name=foo}}
+                                <ul class="server-page-v6 {{if $list2@index neq 0}} hide{{/if}}">
+                                    {{foreach from=$list2 key="key" item="item"}}
+                                    <li data-game="{{$item.SERVER_START_TIME}}|{{$item.GAME_ID}}|{{$item.SID}}|{{$item.SERVER_NAME}}|{{game_name game_id=$item.GAME_ID}}|{{$_game_list[$item.GAME_ID]['GAME_KEY']}}">
+                                        <div class="time">
+                                            <p>{{$item.SERVER_START_TIME|date_format:"m-d"}}</p>
+                                            <p>{{$item.SERVER_START_TIME|date_format:"H:i"}}</p>
+                                        </div>
+                                        <a href="index.php?c=hz-main&a=server&wd_actionid={{$item@index+156}}&game_id={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}" target="_blank" alt="{{game_name game_id=$item.GAME_ID}}" class="icon">
+                                            <img width="100%" src="//img1.37wanimg.com/www/images/sets/{{$_game_list[$item.GAME_ID]['GAME_KEY']}}/80x80.png" alt="">
+                                        </a>
+                                        <div class="intro">
+                                            <h4>
+                                                <a href="index.php?c=hz-main&a=server&wd_actionid={{$item@index+156}}&game_id={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}" target="_blank">{{game_name game_id=$item.GAME_ID}}</a>
+                                            </h4>
+                                            <p>
+                                                <a href="index.php?c=hz-main&a=server&wd_actionid={{$item@index+156}}&game_id={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}" target="_blank">{{$item.SERVER_NAME}}</a>
+                                            </p>
+                                        </div>
+                                        <div class="btn">
+                                            <a href="javascript:;" class="btn-clock"></a>
+                                        </div>
+                                    </li>
+                                    {{/foreach}}
+                                </ul>
+                                {{/foreach}}
+                                <div class="web-pager" data-pageindex="0" data-pagecount="{{count($list)}}">
+                                    <a href="javascript:;" class="page-prev"></a>
+                                    <span class="current">1</span>
+                                     / 
+                                    <span class="total">{{count($list)}}</span>
+                                    <a href="javascript:;" class="page-next"></a>
+                                </div>
+                            </div>
+                            <div class="pannel">
+                                {{data_newest_server_list category=1 limit=28 page_size=7 name='list' state=2}}
+                                {{foreach from=$list item=list2 name=foo}}
+                                <ul class="server-page-v6 {{if $list2@index neq 0}} hide{{/if}}">
+                                    {{foreach from=$list2 key="key" item="item"}}
+                                    <li>
+                                        <div class="time">
+                                            <p>{{$item.SERVER_START_TIME|date_format:"m-d"}}</p>
+                                            <p>{{$item.SERVER_START_TIME|date_format:"H:i"}}</p>
+                                        </div>
+                                        <a href="index.php?c=hz-main&a=server&wd_actionid={{$item@index+156}}&game_id={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}" target="_blank" alt="{{game_name game_id=$item.GAME_ID}}" class="icon">
+                                            <img width="100%" src="//img1.37wanimg.com/www/images/sets/{{$_game_list[$item.GAME_ID]['GAME_KEY']}}/80x80.png" alt="">
+                                        </a>
+                                        <div class="intro">
+                                            <h4>
+                                                <a href="index.php?c=hz-main&a=server&wd_actionid={{$item@index+156}}&game_id={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}" target="_blank">{{game_name game_id=$item.GAME_ID}}</a>
+                                            </h4>
+                                            <p>
+                                                <a href="http://gameapp.37.com/controller/enter_game.php?game_id={{$item.GAME_ID}}&sid={{$item.SID}}&showlogintype=4&wd_entergame=1&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID={{$item.SID}}&wd_GAME_ID={{$item.GAME_ID}}&wd_username={login_account}&wd_SNAME={{$item.SERVER_NAME|escape:"url"}}&error_url=http://landers.37.com/gb/server.php?g={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}" target="_blank">{{$item.SERVER_NAME}}</a>
+                                            </p>
+                                        </div>
+                                        <div class="btn">
+                                            <a href="http://gameapp.37.com/controller/enter_game.php?game_id={{$item.GAME_ID}}&sid={{$item.SID}}&showlogintype=4&wd_entergame=1&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID={{$item.SID}}&wd_GAME_ID={{$item.GAME_ID}}&wd_username={login_account}&wd_SNAME={{$item.SERVER_NAME|escape:"url"}}&error_url=http://landers.37.com/gb/server.php?g={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}" target="_blank" class="btn-enter"></a>
+                                        </div>
+                                    </li>
+                                    {{/foreach}}
+                                </ul>
+                                {{/foreach}}
+                                <div class="web-pager" data-pageindex="0" data-pagecount="{{count($list)}}">
+                                    <a href="javascript:;" class="page-prev"></a>
+                                    <span class="current">1</span>
+                                        / 
+                                    <span class="total">{{count($list)}}</span>
+                                    <a href="javascript:;" class="page-next"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        {{include file="./float_nav.htm"}}
+    </div>
+
+
+<script type="text/template" id="tmp_recommend2">
+    <li>
+        {% if (CATEGORY == 1){ %}
+            <a href="http://game.37.com/redirect.php?action=enter_game_newest&game_id={$ID}&gamebox=1&wd_openingamebox=1&wd_entergame=1&wd_GAME_KEY={$GAME_KEY}&wd_GAME_ID={$ID}" data-position='{"e5":"37_box_recommend_{% if (ident){ %}{$ident}{% }else{ %}up{$index}{% } %}","e9":"{$ID}","e13":"{$photo_bid}"}' target="_blank">
+                <img src="{$imgUrl}" alt="{$NAME}">
+                <span class="panel-btn">
+                    <i class="title1">{$NAME}</i>
+                    <i class="gray1">{$text}</i>
+                    <i class="btn-start hide">开始游戏</i>
+                </span>
+                {% if (img_tag_switch == 1 && img_tag_src){ %}
+                <div class="other-switch"><img src="{$img_tag_src}"></div>
+                {% } %}
+                {% if (CATEGORY == 3 || CATEGORY == 2){ %}
+                <div class="other"><img src="{$imgUrlOther}" alt="{$NAME}"></div>
+                {% } %}
+            </a>
+        {% }else if (CATEGORY == 2){ %}
+            <a href="http://game.{$HOSTS}/play_h5.php?wd_actionid={$actionid}&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}" data-position='{"e5":"37_box_recommend_{% if (ident){ %}{$ident}{% }else{ %}up{$index}{% } %}","e9":"{$ID}","e13":"{$photo_bid}"}' target="_blank">
+                <img src="{$imgUrl}" alt="{$NAME}">
+                <span class="panel-btn">
+                    <i class="title1">{$NAME}</i>
+                    <i class="gray1">{$text}</i>
+                    <i class="btn-start hide">开始游戏</i>
+                </span>
+                {% if (img_tag_switch == 1 && img_tag_src){ %}
+                <div class="other-switch"><img src="{$img_tag_src}"></div>
+                {% } %}
+                <div class="other"><img src="{$imgUrlOther}" alt="{$NAME}"></div>
+            </a>
+        {% }else if (CATEGORY == 3){ %}
+            <a href="{$DOMAIN_URL}?referer=ha_pt_37yyhz&uid=tuijian" data-position='{"e5":"37_box_recommend_{% if (ident){ %}{$ident}{% }else{ %}up{$index}{% } %}","e9":"{$ID}","e13":"{$photo_bid}"}' target="_blank">
+                <img src="{$imgUrl}" alt="{$NAME}">
+                <span class="panel-btn">
+                    <i class="title1">{$NAME}</i>
+                    <i class="gray1">{$text}</i>
+                    <i class="btn-start hide">下载游戏</i>
+                </span>
+                {% if (img_tag_switch == 1 && img_tag_src){ %}
+                <div class="other-switch"><img src="{$img_tag_src}"></div>
+                {% } %}
+                <div class="other"><img src="{$imgUrlOther}" alt="{$NAME}"></div>
+            </a>
+        {% } %}
+    </li>
+</script>
+<script type="text/template" id="tmp_recommend1">
+<li>
+    <a href="{% if (CATEGORY == 1){ %}http://game.37.com/redirect.php?action=enter_game_newest&game_id={$ID}&gamebox=1&wd_openingamebox=1&wd_entergame=1&wd_GAME_KEY={$GAME_KEY}&wd_GAME_ID={$ID}{% }else if (CATEGORY == 2){ %}http://game.{$HOSTS}/play_h5.php?wd_actionid={$actionid}&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}{% } %}" data-position='{"e5":"37_box_recommend_down{$index}","e9":"{$ID}"}' target="_blank">
+        <img src="{$imgUrl}" alt="">
+        <span class="panel-btn">
+            <i class="title1">{$NAME}</i>
+            <i class="gray1">{$text}</i>
+            <i class="btn-start hide">开始游戏</i>
+        </span>
+    </a>
+</li>
+</script>
+<script type="text/template" id="tmp_hotgame">
+    <a target="_blank" href="{% if (CATEGORY == 1){ %}http://game.37.com/redirect.php?action=enter_game_newest&game_id={$ID}&gamebox=1&wd_openingamebox=1&wd_entergame=1&wd_GAME_KEY={$GAME_KEY}&wd_GAME_ID={$ID}{% }else if (CATEGORY == 2){ %}http://game.{$HOSTS}/play_h5.php?wd_actionid=165&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}{% } %}" data-position='{"e5":"37_box_hots_{$index}","e9":"{$ID}","e13":"{$photo_bid}"}'>
+        <img src="http://img1.37wanimg.com/www/images/common/spacer.gif" data-src="{$imgUrl}" alt="">
+        <span class="txt">
+            <i class="f16-bold gray3">{$NAME}</i>
+            <i class="f12 gray3 txt-desc">{$text1} <br /> {$text2}</i>
+            <i class="btn-start">开始游戏</i>
+        </span>
+    </a>
+</script>
+<script type="text/template" id="tmp_mobilegame">
+    <div class="m-mobile-main{% if (empty == 1){ %} m-mobile-empty{% } %}">{% if (empty == 0){ %}
+        {% if (category==2){ %}<a href="http://game.{$HOSTS}/play_h5.php?wd_actionid=0&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}" target="_blank" title="{$NAME}" data-position='{"e5":"37_box_mobilegame_{$index}_icon","e9":"{$ID}"}'>{% }else{ %}{% if (game_link){ %}<a href="{$game_link}" target="_blank" title="{$NAME}" data-position='{"e5":"37_box_mobilegame_{$index}_icon","e9":"{$ID}"}'>{% } %}{% } %}
+            <img width="80" height="80" src="http://img1.37wanimg.com/www/images/common/spacer.gif" data-src="{$game_image}" alt="{$NAME}" />
+        {% if (category==2){ %}</a>{% }else{ %}{% if (game_link){ %}</a>{% } %}{% } %}
+        <h4>{% if (category==2){ %}<a href="http://game.{$HOSTS}/play_h5.php?wd_actionid=0&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}" target="_blank" title="{$NAME}" data-position='{"e5":"37_box_mobilegame_{$index}_title","e9":"{$ID}"}'>{% }else{ %}{% if (game_link){ %}<a href="{$game_link}" target="_blank" title="{$NAME}" data-position='{"e5":"37_box_mobilegame_{$index}_title","e9":"{$ID}"}'>{% } %}{% } %}
+            {$NAME}
+        {% if (category==2){ %}</a>{% }else{ %}{% if (game_link){ %}</a>{% } %}{% } %}</h4>
+        <p class="c9">{$game_type}　{% if (game_size){ %}{$game_size}{% } %}</p>
+        <p class="g-handgame-links">
+            {% if (game_status == 2){ %}
+                <a class="g-handgame-btn g-handgame-download" href="javascript:;" title="预约" data-position='{"e5":"37_box_mobilegame_{$index}_QRCode","e9":"{$ID}"}'>预约</a>
+            {% }else{ %}
+            {% if (category == 3){ %}
+                <a class="g-handgame-btn g-handgame-download" href="javascript:;" title="手机玩" data-position='{"e5":"37_box_mobilegame_{$index}_QRCode","e9":"{$ID}"}'>手机玩</a>
+                {% if (gift_link){ %}<a class="g-handgame-btn" target="_blank" href="{$gift_link}" title="礼包" data-position='{"e5":"37_box_mobilegame_{$index}_gift","e9":"{$ID}"}'>礼包</a>{% } %}
+            {% }else{ %}
+                {% if (category==2){ %}
+                {% if (game_link){ %}<a class="g-handgame-btn g-handgame-play" target="_blank" href="http://game.{$HOSTS}/play_h5.php?wd_actionid=0&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}" title="开始" data-position='{"e5":"37_box_mobilegame_{$index}_begin","e9":"{$ID}"}'>开始</a>{% } %}
+                {% }else{ %}
+                {% if (gift_link){ %}<a class="g-handgame-btn" target="_blank" href="{$gift_link}" title="礼包" data-position='{"e5":"37_box_mobilegame_{$index}_gift","e9":"{$ID}"}'>礼包</a>{% } %}
+                {% } %}
+                <a class="g-handgame-btn g-handgame-download" href="javascript:;" title="手机玩" data-position='{"e5":"37_box_mobilegame_{$index}_QRCode","e9":"{$ID}"}'>手机玩</a>
+            {% } %}
+            {% } %}
+        </p>
+        <div class="handgame-qrcode{% if (index % 3 == 0){ %} handgame-qrcode-r{% } %}" data-fx="{% if (index % 3 == 0){ %}r{% } %}">
+            <div class="handgame-qrcode-arrow hide"></div>
+            <div class="handgame-qrcode-content">
+                <p><img src="{$game_qrcode}" alt="下载试玩" /></p>
+                {% if (game_status == 2){ %}<p>扫码立即前往预约</p>{% }else{ %}<p>扫一扫，手机畅玩</p>{% } %}
+            </div>
+        </div>{% } %}
+    </div>
+</script>
+
+<script type="text/javascript">
+// var game_data = {{$game_data|json_encode}};
+var game_data = {{$game_data|array_values|json_encode}};
+var gb_hot_games = {{$gb_hot_games|json_encode}};
+var gb_rec_games = {{$gb_rec_games|json_encode}};
+var gb_rec2_games = {{$box_index_recomm_game|json_encode|default:"[]"}};
+var gb_index_shouyou = {{$gb_index_shouyou|json_encode}};
+</script>
+
+<script data-main="static/hz/js/modules/index_v6.js?t=20220307165001VER" src="static/hz/js/require.js"></script>
+
+{{include file="./footer.htm"}}
+</body>
+</html>

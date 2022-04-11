@@ -1,0 +1,67 @@
+首页KV大图
+{{data_content key='gamebox_index_kv' site_id='s_www' name='list'}}
+
+首页推荐游戏
+{{data_content key='gamebox_index_recommend' site_id='s_www' name='list'}}
+
+首页热门手游
+{{data_content key='gamebox_index_hot_mob' site_id='s_www' name='list'}}
+
+首页热门页游
+{{data_content key='gamebox_index_hot_web' site_id='s_www' name='list'}}
+
+右侧广告
+{{data_content key='gamebox_index_right_recommend' site_id='s_www' name='right_rec'}}
+
+{{$right_rec.data[0].img}}
+
+获取游戏信息标签
+{{data_game game_id='游戏ID' name='game'}}
+
+页游-kv大图
+{{data_content key='gamebox_web_kv' site_id='s_www' name='list'}}
+
+页游-精品游戏
+{{data_content key='gamebox_web_boutique' site_id='s_www' name='list'}}
+
+手游-kv大图
+{{data_content key='gamebox_mob_kv' site_id='s_www' name='list'}}
+
+手游-kv旁两张小图
+{{data_content key='gamebox_mob_small_kv' site_id='s_www' name='list'}}
+
+手游-精品游戏
+{{data_content key='gamebox_mob_boutique' site_id='s_www' name='list'}}
+
+
+打印结果：
+{{print_r($item)}}
+<!--{{$list|var_dump}}-->
+
+通过game_id获取到以下数据：
+{{$game_data[$item.game_id].NAME}}   游戏名
+{{$game_data[$item.game_id].GAME_KEY}} 游戏key
+{{$game_data[$item.game_id].CHARACTERISTIC}}   小标题
+{{$game_data[$item.game_id].CTYPE}}   游戏子分类:11/页游H5，12/页游flash，13/页游flash和H5共存，21/纯H5游戏，22/微信小游戏，31/原生手游，101/端游
+http://img1.37wanimg.com/www/images/sets/{{$game_data[$item.game_id].GAME_KEY}}/尺寸.jpg  套图
+
+{{$game_data[$item.game_id].CATEGORY}}   游戏子分类:1/页游，2/H5，3/手游{{$game_data[$item.game_id].CTYPE}}   游戏子分类:11/页游H5，12/页游flash，13/页游flash和H5共存，21/纯H5游戏，22/微信小游戏，31/原生手游，101/端游
+
+判断分类：
+页游端游：
+CATEGORY==1&&CTYPE==101
+
+普通页游：
+CATEGORY==1&&CTYPE!=101
+
+手游端游：
+CATEGORY==3&&CTYPE==101
+
+手游h5游戏：
+CATEGORY==2&&CTYPE!=101
+
+手游原生游戏：
+CATEGORY==3&&CTYPE!=101
+
+
+

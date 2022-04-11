@@ -1,0 +1,18 @@
+=======常用命令========
+grunt compass:hz //编译sass文件夹下的scss文件到css文件夹里
+
+grunt compress:hz:index.js    //压缩单个js文件到发布目录，同时更新引用它的文件时间戳（htm、html）到发布目录
+grunt compress:hz:login.css   //压缩单个css文件到发布目录，同时更新引用它的文件时间戳（htm、html）到发布目录
+
+=======其他命令========
+grunt htmlnew:hz:message.html //复制hz里的单个静态html文件到发布目录(37/landers/landers.37.com/hz/)
+grunt tplnew:hz:index.htm     //复制tamplate里的单个模板htm文件到相应的发布目录下(37/web/common.tpl.37.com/landers/hz/)
+grunt cssnew:hz               //压缩hz所有css文件到对应的发布目录(37/landers/landers.37.com/static/hz/css/)
+grunt jsnew:hz                //压缩hz所有js文件到对应的发布目录(37/landers/landers.37.com/static/hz/js/modules/)
+
+双线服类型名字的坑
+因为官网不是读配置的，也是写死的；
+官网每一个都有自己的js定义，官网修改只会影响一个游戏；盒子是统一的组件，一修改就全部游戏都修改；
+
+目前的规则是，双线服类型，在盒子显示的就是双线服；如果在其他类型定义名字，才能自定义服类型名字；
+如果现在要修改组件改变这个规则，会涉及到官网、盒子所有游戏；不建议修改；

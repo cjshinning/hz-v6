@@ -1,0 +1,371 @@
+{{include file="./header_v6.htm"}}
+{{game_flashes name='flashConfig' action_ids='161,162,163'}}
+{{data_content key='gb_hot_games' site_id='s_www' name='gb_hot_games'}}
+{{data_content key='gb_rec_games' site_id='s_www' name='gb_rec_games'}}
+{{data_content key='box_index_recomm_game' site_id='s_www' name='box_index_recomm_game'}}
+{{data_content key='gb_index_shouyou' site_id='s_www' name='gb_index_shouyou'}}
+<div class="g-main fl" id="gMain">
+            <div class="index-kv" id="indexKv">
+                <ul class="kv-img">
+                    {{data_content key='gamebox_index_kv' site_id='s_www' name='list' limit=6}}
+                    {{foreach $list.data as $item}}
+                    {{if $item.link}}
+                    <li data-position='{"e5":"37_box_v6_index_kv_{{$item@iteration}}","e9":"{{$item.game_id}}","e13":"{{$item.photo_bid}}"}'>
+                        <a href="{{$item.link}}" target="_blank">
+                            <img src="{{$item.img}}" alt="{{$item.title}}">
+                        </a>
+                    </li>
+                    {{else}}
+                    <li>
+                        <a class="kv-jump" href="javascript:;" data-category="{{$game_data[$item.game_id].CATEGORY}}" data-ctype="{{$game_data[$item.game_id].CTYPE}}" data-gameid="{{$item.game_id}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-name="{{$game_data[$item.game_id].NAME}}" data-position='{"e5":"37_box_v6_index_kv_{{$item@iteration}}","e9":"{{$item.game_id}}","e13":"{{$item.photo_bid}}"}'>
+                            <img src="{{$item.img}}" alt="{{$item.title}}">
+                        </a>
+                    </li>
+                    {{/if}}
+                    {{/foreach}}
+                </ul>
+                <ul class="kv-num">
+                    {{foreach $list.data as $item}}
+                    <li>
+                        <h3>{{$item.title}}</h3>
+                        <p>{{$item.small_title}}</p>
+                    </li>
+                    {{/foreach}}
+                </ul>
+            </div>
+            <div class="m-recommend-v6">
+                <dl>
+                    <dt class="pdbtm10 clearfix">
+                        <div class="search" id="gameSearch">
+                            <input type="text" id="iptSearch" maxlength="20" placeholder="搜索游戏名">
+                            <a href="javascript:;" class="btn">&nbsp;&nbsp;</a>
+                        </div>
+                        <span class="title1 lh27"><i></i>推荐游戏</span>
+                    </dt>
+                    <dd>
+                        {{*<!--flash panel-->
+                        <div class="flash-panel">
+                            <object id="flashMain" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="671" height="242">
+                                <param name="movie" value="{{$flashConfig.flash_src}}" />
+                                <param name="quality" value="high" />
+                                <param name="wmode" value="transparent" />
+                                <param name="swfversion" value="15.0.0.0" />
+                                <param name="allowScriptAccess" value="always" />
+                                <param name="flashvars" value="urls={{$flashConfig.urls|json_encode|base64_encode}}" />
+                                <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
+                                <!--[if !IE]>-->
+                                <object type="application/x-shockwave-flash" data="{{$flashConfig.flash_src}}" width="671" height="242">
+                                    <!--<![endif]-->
+                                    <param name="quality" value="high" />
+                                    <param name="wmode" value="transparent" />
+                                    <param name="swfversion" value="15.0.0.0" />
+                                    <param name="allowScriptAccess" value="always" />
+                                    <param name="flashvars" value="urls={{$flashConfig.urls|json_encode|base64_encode}}" />
+                                    <div>
+                                        <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+                                        <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
+                                    </div>
+                                    <!--[if !IE]>-->
+                                </object>
+                                <!--<![endif]-->
+                            </object>
+                        </div>*}}
+                        <!-- 旧版推荐游戏 -->
+                        <!-- <div class="m-recommend-games2">
+                            <div class="loading">
+                                <img src="http://img1.37wanimg.com/www/css/images/game_helper/loading.gif" alt="">
+                            </div>
+                            <ul class="clearfix hide" id="recommend2">
+
+                            </ul>
+                        </div> -->
+                        <!-- <div class="m-recommend-games">
+                            <div class="loading">
+                                <img src="http://img1.37wanimg.com/www/css/images/game_helper/loading.gif" alt="">
+                            </div>
+                            <ul class="clearfix hide" id="recommend1">
+
+                            </ul>
+                        </div> -->
+
+                        <!-- v6推荐游戏 -->
+                        <div class="loading hide">
+                            <img src="http://img1.37wanimg.com/www/css/images/game_helper/loading.gif" alt="">
+                        </div>
+                        <div class="m-recommend-games3">
+                            <ul class="clearfix" id="recommendV6">
+                                <!-- 页游 -->
+                                {{data_content key='gamebox_index_recommend' site_id='s_www' name='list'}}
+                                {{foreach $list.data as $k => $item}}
+                                {{if $k<4}}
+                                <li class="{{if $game_data[$item.game_id].CATEGORY eq 1}}yy{{/if}}" data-category="{{$game_data[$item.game_id].CATEGORY}}" data-ctype="{{$game_data[$item.game_id].CTYPE}}" data-gameid="{{$item.game_id}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-name="{{$game_data[$item.game_id].NAME}}" data-position='{"e5":"37_box_v6_index_recommend_{{$item@iteration}}","e9":"{{$item.game_id}}","e13":"{{$item.photo_bid}}"}'>
+                                    {{if $game_data[$item.game_id].CATEGORY neq 1}}
+                                    <a href="{{$item.link}}" target="_blank" class="mobile-app">
+                                    {{/if}}
+                                    <div class="pic">
+                                        <img src="{{$item.img}}" alt="">
+                                    </div>
+                                    {{if $game_data[$item.game_id].CATEGORY!=1}}
+                                    <div class="mask">
+                                        <p>扫一扫 手机畅玩</p>
+                                        <img src="{{$game_data[$item.game_id].OTHER_INFO.download_img}}" alt="">
+                                    </div>
+                                    {{/if}}
+                                    <div class="intro">
+                                        <div class="title">{{$game_data[$item.game_id].NAME}}</div>
+                                        <div class="sub">{{$game_data[$item.game_id].CHARACTERISTIC}}</div>
+                                        {{if $game_data[$item.game_id].CATEGORY==3 && $game_data[$item.game_id].CTYPE != 101}}
+                                        <i class="btn-start2 btn-start-v6" data-category="{{$game_data[$item.game_id].CATEGORY}}" data-ctype="{{$game_data[$item.game_id].CTYPE}}" data-gameid="{{$item.game_id}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-name="{{$game_data[$item.game_id].NAME}}">下载游戏</i>
+                                        {{else}}
+                                        <i class="btn-start2 btn-start-v6" data-category="{{$game_data[$item.game_id].CATEGORY}}" data-ctype="{{$game_data[$item.game_id].CTYPE}}" data-gameid="{{$item.game_id}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-name="{{$game_data[$item.game_id].NAME}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-name="{{$game_data[$item.game_id].NAME}}">开始游戏</i>
+                                        {{/if}}
+                                    </div>
+                                    <div class="marks">
+                                        {{if $game_data[$item.game_id].GAME_TAGS[0]=='NEW'}}
+                                        <img src="/static/hz/css/images/label-new.png" alt="">
+                                        {{else if $game_data[$item.game_id].GAME_TAGS[0]=='HOT'}}
+                                        <img src="/static/hz/css/images/label-hot.png" alt="">
+                                        {{else if $game_data[$item.game_id].GAME_TAGS[0]=='GIFT'}}
+                                        <img src="/static/hz/css/images/label-gift.png" alt="">
+                                        {{/if}}
+                                    </div>
+                                    {{if $game_data[$item.game_id].CATEGORY neq 1}}
+                                    </a>
+                                    {{/if}}
+                                </li>
+                                {{/if}}
+                                {{/foreach}}
+                            </ul>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="m-mobilegames-v6">
+                <dl>
+                    <dt>
+                        <a href="//landers.37.com/index.php?c=hz-main&a=search_v6" target="_blank" class="more fr" id="mobileMoreV6">更多+</a>
+                        <span class="title1"><i></i>热门手游</span>
+                    </dt>
+                    <dd>
+                        <!-- 旧版手游 -->
+                        <!-- <div class="loading">
+                            <img src="http://img1.37wanimg.com/www/css/images/game_helper/loading.gif" alt="">
+                        </div>
+                        <div class="m-mobile-list clearfix hide" id="mobileGames"></div> -->
+
+                        <!-- v6热门手游 -->
+                        <div class="loading hide">
+                            <img src="http://img1.37wanimg.com/www/css/images/game_helper/loading.gif" alt="">
+                        </div>
+                        <div class="m-mobile-list2" id="mobileGamesV6">
+                            <ul class="clearfix">
+                                {{data_content key='gamebox_index_hot_mob' site_id='s_www' name='list'}}
+                                {{foreach $list.data as $k => $item}}
+                                <!--{{$item|var_dump}}-->
+                                {{if $k<4}}
+                                <li>
+                                    <a href="{{$item.link}}" target="_blank" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-name="{{$game_data[$item.game_id].NAME}}" data-position='{"e5":"37_box_v6_index_mobilegames_{{$item@iteration}}","e9":"{{$item.game_id}}","e13":"{{$item.photo_bid}}"}'>
+                                        <div class="pic">
+                                            <img src="{{$item.img}}" alt="">
+                                        </div>
+                                        <div class="mask">
+                                            <p>扫一扫 手机畅玩</p>
+                                            <img src="{{$game_data[$item.game_id].OTHER_INFO.download_img}}" alt="">
+                                        </div>
+                                        <div class="intro">
+                                            <div class="icon">
+                                                <img src="//img1.37wanimg.com/www/images/sets/{{$game_data[$item.game_id].GAME_KEY}}/80x80.png" width="100%" alt="">
+                                            </div>
+                                            <div class="title">
+                                                {{$game_data[$item.game_id].NAME}}
+                                            </div>
+                                            <div class="sub">{{$game_data[$item.game_id].CHARACTERISTIC}}</div>
+                                            <div class="labels">
+                                                {{foreach $game_data[$item.game_id].GAME_THEME as $them}} 
+                                                <span class="label-2">{{$them}}</span>
+                                                {{/foreach}}
+                                            </div>
+                                            <i class="btn-start2 btn-start-v6" data-category="{{$game_data[$item.game_id].CATEGORY}}" data-ctype="{{$game_data[$item.game_id].CTYPE}}" data-gameid="{{$item.game_id}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-name="{{$game_data[$item.game_id].NAME}}">
+                                                {{if $game_data[$item.game_id].CATEGORY==3 && $game_data[$item.game_id].CTYPE != 101}}
+                                                下载游戏
+                                                {{else}}
+                                                开始游戏
+                                                {{/if}}
+                                            </i>
+                                        </div>
+                                    </a>
+                                </li>
+                                {{/if}}
+                                {{/foreach}}
+                            </ul>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="m-hotgames-v6">
+                <dl>
+                    <dt>
+                        <!-- <a href="javascript:;" class="more fr" id="hotMore">更多+</a> -->
+                        <span class="title1"><i></i>热门页游</span>
+                    </dt>
+                    <dd>
+                        <!-- 旧版页游 -->
+                        <!-- <div class="loading">
+                            <img src="http://img1.37wanimg.com/www/css/images/game_helper/loading.gif" alt="">
+                        </div>
+                        <div class="m-hot-list clearfix hide" id="hotGames"></div> -->
+
+                        <!-- v6热门页游 -->
+                        <div class="loading hide">
+                            <img src="http://img1.37wanimg.com/www/css/images/game_helper/loading.gif" alt="">
+                        </div>
+                        <div class="m-hot-list2 clearfix" id="hotGamesV6">
+                            <ul class="clearfix">
+                                {{data_content key='gamebox_index_hot_web' site_id='s_www' name='list'}}
+                                {{foreach $list.data as $k => $item}}
+                                {{if $k<8}}
+                                <li data-category="{{$game_data[$item.game_id].CATEGORY}}" data-ctype="{{$game_data[$item.game_id].CTYPE}}" data-gameid="{{$item.game_id}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-gamekey="{{$game_data[$item.game_id].GAME_KEY}}" data-name="{{$game_data[$item.game_id].NAME}}" data-position='{"e5":"37_box_v6_index_webgames_{{$item@iteration}}","e9":"{{$item.game_id}}","e13":"{{$item.photo_bid}}"}'>
+                                    <div class="pic">
+                                        <img src="{{$item.img}}" alt="">
+                                    </div>
+                                    <div class="intro">
+                                        <div class="title">{{$game_data[$item.game_id].NAME}}</div>
+                                        <div class="sub">{{$game_data[$item.game_id].CHARACTERISTIC|truncate:10}}</div>
+                                        <i class="btn-start2">开始游戏</i>
+                                    </div>
+                                </li>
+                                {{/if}}
+                                {{/foreach}}
+                            </ul>
+                        </div>
+                    </dd>
+                </dl>
+                {{if count($list.data)>8}}
+                <div class="w-more">
+                    <a href="//landers.37.com/index.php?c=hz-main&a=search_v6" target="_blank" id="hotMoreV6" data-position='{"e5":"37_box_v6_index_moregame","e9":"","e13":""}'>更多游戏+</a>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+
+        {{include file="./float_nav.htm"}}
+    </div>
+
+<script type="text/template" id="tmp_recommend2">
+    <li>
+        {% if (CATEGORY == 1){ %}
+            <a href="http://game.37.com/redirect.php?action=enter_game_newest&game_id={$ID}&gamebox=1&wd_openingamebox=1&wd_entergame=1&wd_GAME_KEY={$GAME_KEY}&wd_GAME_ID={$ID}" data-position='{"e5":"37_box_recommend_{% if (ident){ %}{$ident}{% }else{ %}up{$index}{% } %}","e9":"{$ID}","e13":"{$photo_bid}"}' target="_blank">
+                <img src="{$imgUrl}" alt="{$NAME}">
+                <span class="panel-btn">
+                    <i class="title1">{$NAME}</i>
+                    <i class="gray1">{$text}</i>
+                    <i class="btn-start hide">开始游戏</i>
+                </span>
+                {% if (img_tag_switch == 1 && img_tag_src){ %}
+                <div class="other-switch"><img src="{$img_tag_src}"></div>
+                {% } %}
+                {% if (CATEGORY == 3 || CATEGORY == 2){ %}
+                <div class="other"><img src="{$imgUrlOther}" alt="{$NAME}"></div>
+                {% } %}
+            </a>
+        {% }else if (CATEGORY == 2){ %}
+            <a href="http://game.{$HOSTS}/play_h5.php?wd_actionid={$actionid}&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}" data-position='{"e5":"37_box_recommend_{% if (ident){ %}{$ident}{% }else{ %}up{$index}{% } %}","e9":"{$ID}","e13":"{$photo_bid}"}' target="_blank">
+                <img src="{$imgUrl}" alt="{$NAME}">
+                <span class="panel-btn">
+                    <i class="title1">{$NAME}</i>
+                    <i class="gray1">{$text}</i>
+                    <i class="btn-start hide">开始游戏</i>
+                </span>
+                {% if (img_tag_switch == 1 && img_tag_src){ %}
+                <div class="other-switch"><img src="{$img_tag_src}"></div>
+                {% } %}
+                <div class="other"><img src="{$imgUrlOther}" alt="{$NAME}"></div>
+            </a>
+        {% }else if (CATEGORY == 3){ %}
+            <a href="{$DOMAIN_URL}?referer=ha_pt_37yyhz&uid=tuijian" data-position='{"e5":"37_box_recommend_{% if (ident){ %}{$ident}{% }else{ %}up{$index}{% } %}","e9":"{$ID}","e13":"{$photo_bid}"}' target="_blank">
+                <img src="{$imgUrl}" alt="{$NAME}">
+                <span class="panel-btn">
+                    <i class="title1">{$NAME}</i>
+                    <i class="gray1">{$text}</i>
+                    <i class="btn-start hide">下载游戏</i>
+                </span>
+                {% if (img_tag_switch == 1 && img_tag_src){ %}
+                <div class="other-switch"><img src="{$img_tag_src}"></div>
+                {% } %}
+                <div class="other"><img src="{$imgUrlOther}" alt="{$NAME}"></div>
+            </a>
+        {% } %}
+    </li>
+</script>
+<script type="text/template" id="tmp_recommend1">
+<li>
+    <a href="{% if (CATEGORY == 1){ %}http://game.37.com/redirect.php?action=enter_game_newest&game_id={$ID}&gamebox=1&wd_openingamebox=1&wd_entergame=1&wd_GAME_KEY={$GAME_KEY}&wd_GAME_ID={$ID}{% }else if (CATEGORY == 2){ %}http://game.{$HOSTS}/play_h5.php?wd_actionid={$actionid}&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}{% } %}" data-position='{"e5":"37_box_recommend_down{$index}","e9":"{$ID}"}' target="_blank">
+        <img src="{$imgUrl}" alt="">
+        <span class="panel-btn">
+            <i class="title1">{$NAME}</i>
+            <i class="gray1">{$text}</i>
+            <i class="btn-start hide">开始游戏</i>
+        </span>
+    </a>
+</li>
+</script>
+<script type="text/template" id="tmp_hotgame">
+    <a target="_blank" href="{% if (CATEGORY == 1){ %}http://game.37.com/redirect.php?action=enter_game_newest&game_id={$ID}&gamebox=1&wd_openingamebox=1&wd_entergame=1&wd_GAME_KEY={$GAME_KEY}&wd_GAME_ID={$ID}{% }else if (CATEGORY == 2){ %}http://game.{$HOSTS}/play_h5.php?wd_actionid=165&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}{% } %}" data-position='{"e5":"37_box_hots_{$index}","e9":"{$ID}","e13":"{$photo_bid}"}'>
+        <img src="http://img1.37wanimg.com/www/images/common/spacer.gif" data-src="{$imgUrl}" alt="">
+        <span class="txt">
+            <i class="f16-bold gray3">{$NAME}</i>
+            <i class="f12 gray3 txt-desc">{$text1} <br /> {$text2}</i>
+            <i class="btn-start">开始游戏</i>
+        </span>
+    </a>
+</script>
+<script type="text/template" id="tmp_mobilegame">
+    <div class="m-mobile-main{% if (empty == 1){ %} m-mobile-empty{% } %}">{% if (empty == 0){ %}
+        {% if (category==2){ %}<a href="http://game.{$HOSTS}/play_h5.php?wd_actionid=0&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}" target="_blank" title="{$NAME}" data-position='{"e5":"37_box_mobilegame_{$index}_icon","e9":"{$ID}"}'>{% }else{ %}{% if (game_link){ %}<a href="{$game_link}" target="_blank" title="{$NAME}" data-position='{"e5":"37_box_mobilegame_{$index}_icon","e9":"{$ID}"}'>{% } %}{% } %}
+            <img width="80" height="80" src="http://img1.37wanimg.com/www/images/common/spacer.gif" data-src="{$game_image}" alt="{$NAME}" />
+        {% if (category==2){ %}</a>{% }else{ %}{% if (game_link){ %}</a>{% } %}{% } %}
+        <h4>{% if (category==2){ %}<a href="http://game.{$HOSTS}/play_h5.php?wd_actionid=0&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}" target="_blank" title="{$NAME}" data-position='{"e5":"37_box_mobilegame_{$index}_title","e9":"{$ID}"}'>{% }else{ %}{% if (game_link){ %}<a href="{$game_link}" target="_blank" title="{$NAME}" data-position='{"e5":"37_box_mobilegame_{$index}_title","e9":"{$ID}"}'>{% } %}{% } %}
+            {$NAME}
+        {% if (category==2){ %}</a>{% }else{ %}{% if (game_link){ %}</a>{% } %}{% } %}</h4>
+        <p class="c9">{$game_type}　{% if (game_size){ %}{$game_size}{% } %}</p>
+        <p class="g-handgame-links">
+            {% if (game_status == 2){ %}
+                <a class="g-handgame-btn g-handgame-download" href="javascript:;" title="预约" data-position='{"e5":"37_box_mobilegame_{$index}_QRCode","e9":"{$ID}"}'>预约</a>
+            {% }else{ %}
+            {% if (category == 3){ %}
+                <a class="g-handgame-btn g-handgame-download" href="javascript:;" title="手机玩" data-position='{"e5":"37_box_mobilegame_{$index}_QRCode","e9":"{$ID}"}'>手机玩</a>
+                {% if (gift_link){ %}<a class="g-handgame-btn" target="_blank" href="{$gift_link}" title="礼包" data-position='{"e5":"37_box_mobilegame_{$index}_gift","e9":"{$ID}"}'>礼包</a>{% } %}
+            {% }else{ %}
+                {% if (category==2){ %}
+                {% if (game_link){ %}<a class="g-handgame-btn g-handgame-play" target="_blank" href="http://game.{$HOSTS}/play_h5.php?wd_actionid=0&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}" title="开始" data-position='{"e5":"37_box_mobilegame_{$index}_begin","e9":"{$ID}"}'>开始</a>{% } %}
+                {% }else{ %}
+                {% if (gift_link){ %}<a class="g-handgame-btn" target="_blank" href="{$gift_link}" title="礼包" data-position='{"e5":"37_box_mobilegame_{$index}_gift","e9":"{$ID}"}'>礼包</a>{% } %}
+                {% } %}
+                <a class="g-handgame-btn g-handgame-download" href="javascript:;" title="手机玩" data-position='{"e5":"37_box_mobilegame_{$index}_QRCode","e9":"{$ID}"}'>手机玩</a>
+            {% } %}
+            {% } %}
+        </p>
+        <div class="handgame-qrcode{% if (index % 3 == 0){ %} handgame-qrcode-r{% } %}" data-fx="{% if (index % 3 == 0){ %}r{% } %}">
+            <div class="handgame-qrcode-arrow hide"></div>
+            <div class="handgame-qrcode-content">
+                <p><img src="{$game_qrcode}" alt="下载试玩" /></p>
+                {% if (game_status == 2){ %}<p>扫码立即前往预约</p>{% }else{ %}<p>扫一扫，手机畅玩</p>{% } %}
+            </div>
+        </div>{% } %}
+    </div>
+</script>
+
+<script type="text/javascript">
+// var game_data = {{$game_data|json_encode}};
+var game_data = {{$game_data|array_values|json_encode}};
+var gb_hot_games = {{$gb_hot_games|json_encode}};
+var gb_rec_games = {{$gb_rec_games|json_encode}};
+var gb_rec2_games = {{$box_index_recomm_game|json_encode|default:"[]"}};
+var gb_index_shouyou = {{$gb_index_shouyou|json_encode}};
+</script>
+
+<script data-main="static/hz/js/modules/index_v6.js?t=20220307165001VER" src="static/hz/js/require.js"></script>
+
+{{include file="./footer.htm"}}
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="zh" class="ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="zh" class="ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="zh" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="zh" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{block name="title"}}{{/block}}</title>
+    <meta name="Keywords" content="{{block name='keywords'}}{{/block}}" />
+    <meta name="Description" content="" />
+    <meta name="frontend" content="jqh" />
+    <link rel="stylesheet" href="/static/hz/css/base.css?t=20190428165001VER" type="text/css" />
+    <link rel="stylesheet" href="/static/hz/css/main_v6.css?t=20220307165001VER" type="text/css" />
+    {{data_content key='landerstogray' site_id='s_www' name='landerstogray'}}
+    {{if $landerstogray["data"][0]["isindex"]==1}}<style type="text/css">
+        html.html_index {
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: url("data:image/svg+xml;utf8,#grayscale");
+            filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+            -webkit-filter: grayscale(1);
+        }
+    </style>
+    <script type="text/javascript">
+        document.getElementsByTagName('html')[0].className = 'html_index';
+    </script>{{/if}}
+    {{if $landerstogray["data"][0]["issearch"]==1}}<style type="text/css">
+        html.html_search {
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: url("data:image/svg+xml;utf8,#grayscale");
+            filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+            -webkit-filter: grayscale(1);
+        }
+    </style>
+    <script type="text/javascript">
+        document.getElementsByTagName('html')[0].className = 'html_search';
+    </script>{{/if}}
+</head>
+
+<body>
+    <script type="text/template" id="played-tpl">
+        <a href="{$URL}&wd_actionid=155" target="_blank" data-lid="{$LID}" data-sq="Tips" data-title="{$NAME} {$SERVER_NAME}" data-position='{"e5":"37_box_history","e9":"{$GAME_ID}"}'><span class="game-pic"><img src="http://img1.37wanimg.com/www/images/client/default80.png" data-src="http://img1.37wanimg.com/www/images/sets/{$GAME_KEY}/80x80.png" alt=""></span><span class="bg-played-bottom">{$shortName}</span><span class="game-name" title="{$title}">{$NAME}</span><span class="icon-del" title="删除"></span></a>
+    </script>
+    <div id="played-find" class="hide">
+        <a href="javascript:;" class="game-search"><span class="game-add"></span><span class="game-name">找游戏</span></a>
+    </div>
+    <div class="sq-tips hide" id="sq-tips">
+        <p class="sq-tips-title kui-tips-title"></p>
+    </div>
+    {{include file="./hz_ad_right_v6.htm"}}
+    <div class="wrapper clearfix">
+        <div class="g-aside fl">
+            <dl class="m-played" id="played-module">
+                <dt>
+                    <a href="javascript:;" class="btn-del" title="删除游戏" id="ico-delete"></a>
+                    <span class="title1" id="played-top-txt">最新玩过的游戏</span>
+                </dt>
+                <dd>
+                    <div class="m-played-games" id="played">
+                        <img src="http://img1.37wanimg.com/www/css/images/game_helper/loading.gif" class="loading2">
+                    </div>
+                    <div class="m-pager" id="played-page" data-page="1">
+                        <a href="javascript:;" class="page-l" id="ico-prev"></a>
+                        <p id="played-page-num"><span class="num">1</span>/1</p> <a href="javascript:;" class="page-r"
+                            id="ico-next"></a>
+                    </div>
+                </dd>
+            </dl>
+            <div class="m-nologin hide" id="nologin">
+                <img data-src="/static/hz/css/images/nologin.png" alt="">
+                <p class="bg-login-btn">
+                    <a href="javascript:;" class="fl login">登录</a>
+                    <a href="javascript:;" class="fl reg">注册</a>
+                </p>
+            </div>
+            <dl class="m-server">
+                <dt>
+                    <span class="title1">开服列表</span>
+                </dt>
+                <dd id="tabServer">
+                    <div class="m-tab-tit clearfix">
+                        <a href="javascript:;" class="tab-tit-l-hover">新服预告</a>
+                        <a href="javascript:;" class="tab-tit-r">已开新服</a>
+                    </div>
+
+                    {{data_game_list name='_game_list'}}
+                    <div class="panel">
+                        {{data_newest_server_list  category=1 limit=14 page_size=7 name='list' state=1 time_order="asc"}}
+                        {{foreach from=$list item=list2 name=foo}}
+                        <ul class="server-page{{if $list2@index neq 0}} hide{{/if}}"
+                            data-tabid="{{$smarty.foreach.foo.iteration}}">
+                            {{foreach from=$list2 key="key" item="item"}}
+                            <li {{if $item@first}} class="hover" {{/if}}
+                                data-game="{{$item.SERVER_START_TIME}}|{{$item.GAME_ID}}|{{$item.SID}}|{{$item.SERVER_NAME}}|{{game_name game_id=$item.GAME_ID}}|{{$_game_list[$item.GAME_ID]['GAME_KEY']}}">
+                                <a href="index.php?c=hz-main&a=server&wd_actionid={{$item@index+156}}&game_id={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}"
+                                    target="_blank" class="name"
+                                    data-position='{"e5":"37_box_leftserver_1","e9":"{{$item.GAME_ID}}"}'><img
+                                        src="http://img1.37wanimg.com/www/images/client/default80.png"
+                                        data-src="http://img1.37wanimg.com/www/images/sets/{{$_game_list[$item.GAME_ID]['GAME_KEY']}}/80x80.png"
+                                        alt="{{game_name game_id=$item.GAME_ID}}">{{game_name game_id=$item.GAME_ID}}</a>
+                                <a href="index.php?c=hz-main&a=server&wd_actionid={{$item@index+156}}&game_id={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}"
+                                    target="_blank" class="num"
+                                    data-position='{"e5":"37_box_leftserver_1","e9":"{{$item.GAME_ID}}"}'>{{$item|server_short_name}}服</a>
+                                <span class="time">{{$item.SERVER_START_TIME|date_format:"m-d"}}
+                                    {{$item.SERVER_START_TIME|date_format:"H:i"}}</span>
+                                <a href="javascript:;" class="btn-alert">闹钟</a></li>
+                            {{/foreach}}
+                        </ul>
+                        {{/foreach}}
+                        <div class="m-pager" data-pageindex="0" data-pagecount="{{count($list)}}">
+                            <a href="javascript:;" class="page-l"></a>
+                            <p><span class="num">1</span>/{{count($list)}}</p> <a href="javascript:;"
+                                class="page-r"></a>
+                        </div>
+                    </div>
+                    <div class="panel hide">
+                        {{data_newest_server_list category=1 limit=28 page_size=7 name='list' state=2}}
+                        {{foreach from=$list item=list2 name=foo}}
+                        <ul class="server-page{{if $list2@index neq 0}} hide{{/if}}"
+                            data-tabid="{{$smarty.foreach.foo.iteration}}">
+                            {{foreach from=$list2 key="key" item="item"}}
+                            <li {{if $item@first}} class="hover" {{/if}}>
+                                <a href="index.php?c=hz-main&a=server&wd_actionid={{$item@index+156}}&game_id={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}"
+                                    target="_blank" class="name"
+                                    data-position='{"e5":"37_box_leftserver_2","e9":"{{$item.GAME_ID}}"}'><img
+                                        src="http://img1.37wanimg.com/www/images/client/default80.png"
+                                        data-src="http://img1.37wanimg.com/www/images/sets/{{$_game_list[$item.GAME_ID]['GAME_KEY']}}/80x80.png"
+                                        alt="{{game_name game_id=$item.GAME_ID}}">{{game_name game_id=$item.GAME_ID}}</a>
+                                <a href="http://gameapp.37.com/controller/enter_game.php?game_id={{$item.GAME_ID}}&sid={{$item.SID}}&showlogintype=4&wd_entergame=1&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID={{$item.SID}}&wd_GAME_ID={{$item.GAME_ID}}&wd_username={login_account}&wd_SNAME={{$item.SERVER_NAME|escape:"url"}}&error_url=http://landers.37.com/gb/server.php?g={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}"
+                                    target="_blank" class="num"
+                                    data-position='{"e5":"37_box_leftserver_2","e9":"{{$item.GAME_ID}}"}'>{{$item|server_short_name}}服</a>
+                                <span class="time">{{$item.SERVER_START_TIME|date_format:"m-d"}}
+                                    {{$item.SERVER_START_TIME|date_format:"H:i"}}</span>
+                                <a href="http://gameapp.37.com/controller/enter_game.php?game_id={{$item.GAME_ID}}&sid={{$item.SID}}&showlogintype=4&wd_entergame=1&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID={{$item.SID}}&wd_GAME_ID={{$item.GAME_ID}}&wd_username={login_account}&wd_SNAME={{$item.SERVER_NAME|escape:"url"}}&error_url=http://landers.37.com/gb/server.php?g={{$item.GAME_ID}}&wd_NAME={{game_name game_id=$item.GAME_ID|escape:"url"}}&wd_GAME_KEY={{$_game_list[$item.GAME_ID]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$item.GAME_ID}}"
+                                    target="_blank" class="btn3"
+                                    data-position='{"e5":"37_box_leftserver_2","e9":"{{$item.GAME_ID}}"}'>开始游戏</a></li>
+                            {{/foreach}}
+                        </ul>
+                        {{/foreach}}
+                        <div class="m-pager" data-pageindex="0" data-pagecount="{{count($list)}}">
+                            <a href="javascript:;" class="page-l"></a>
+                            <p><span class="num">1</span>/{{count($list)}}</p> <a href="javascript:;"
+                                class="page-r"></a>
+                        </div>
+                    </div>
+
+                </dd>
+            </dl>
+            {{include file="../html/hz_ad_left.html"}}
+        </div>
+        {{*<!--[if !IE]><!-->
+        <div style="position:fixed;left:0;top:0;width:1px;height: 1px;">
+            <object type="application/x-shockwave-flash" data="/static/hz/testFlashCorrupt.swf?t=20190428165001VER" width="1" height="1">
+                <param name="quality" value="high" />
+                <param name="wmode" value="transparent" />
+                <param name="swfversion" value="15.0.0.0" />
+                <param name="allowScriptAccess" value="always" />
+                <div>
+                    <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+                    <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
+                </div>
+            </object>
+        </div>
+        <!--<![endif]-->*}}

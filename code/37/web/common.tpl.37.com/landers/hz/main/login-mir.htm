@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <title>微端</title>
+    <meta name="frontend" content="hanzh" />
+    <link rel="stylesheet" href="http://landers.37.com/static/hz/css/base.css?t=20190401143843VER" />
+    <link rel="stylesheet" href="http://landers.37.com/static/hz/css/login-mir.css?t=20190401143843VER" />
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:;" class="top-btn top-btn-min" id="top-btn-min"></a>
+        <a href="javascript:;" class="top-btn top-btn-close" id="top-btn-close"></a>
+        <div id="log-form" class="form log-form ">
+            <div class="form-bg"></div>
+            <p class="msg" id="log-msg" tabindex="-1"></p>
+            <input type="text" name="log-username" id="log-username" class="log-username input log-input" maxlength="25" placeholder="帐号" /><a id="show-alert" class="show-alert ico ico-2"></a>
+            <input type="password" name="log-password" id="log-password" class="log-password input log-input" maxlength="20" placeholder="密码" />
+            <span id="usr-ico" class="ico ico-usr"></span>
+            <span id="psw-ico" class="ico ico-psw"></span>
+            <p class="log-verify hide" id="log-verify"><input maxlength="4" type="text" name="safe_code" class="input log-verify-code" placeholder="请输入验证码" id="log-verify-code"><img class="log-verify-img" alt="点击更新验证码" title="点击更新验证码"></p>
+            <p class="log-checkbox" id="log-checkbox">
+                <span id="checkbox-rPassword" class="ico checkbox checked"></span><a id="checkbox-rPassword-a" class="a checkbox-a-rp" href="#">记住密码</a><span id="checkbox-autoLogin" class="ico checkbox"></span><a id="checkbox-autoLogin-a" class="a checkbox-a-al" href="#">自动登录</a>
+            </p>
+            <a href="#" class="btn-log btn btn-1" id="btn-log">登　录</a>
+            <p class="log-link" id="log-link">
+                <a class="forget a" target="_blank" title="找回密码" href="http://my.37.com/forgetpwd/">找回密码</a>
+                <a id="btn-reg-form" class="tries" data-id="btn-reg-form">马上注册</a>
+            </p>
+            <p class="log-link log-link-verify hide" id="log-verify-close">
+                <a class="a log-verify-close" title="返回" href="javascript:;">返回</a>
+            </p>
+            <div class="input-alert" id="input-alert">
+                <ul class="input-alert-ul" id="input-alert-ul">
+                    <li class="input-alert-li"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="avatar " id="avatar">
+            <div class="avatar-img" style="background:url(http://img1.37wanimg.com/landers/hz/images/head/19_login.png) no-repeat;*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='http://img1.37wanimg.com/landers/hz/images/head/19_login.png');"></div>
+            <div class="avatar-mask"></div>
+        </div>
+        <div id="reg-form" class="form reg-form hide">
+            <div class="form-bg"></div>
+            <div class="form-p">
+                <p class="msg " id="reg-msg" tabindex="-1"></p>
+                <p class="reg-usr">
+                    <input type="text" id="reg-username-s" name="login_account" class="reg-username input placeholder" tabindex="1" maxlength="20" value="帐号(4-20个数字、字母、下划线)"/>
+                    <input type="text" id="reg-username" name="login_account" data-rule="username" maxlength="20" tabindex="1" class="reg-username input hide reg-input"/>
+                </p>
+                <p class="reg-psw">
+                    <input type="text" id="reg-password-s" name="password" class="reg-password input placeholder" tabindex="2" maxlength="20" value="密码(6-20个数字、字母、特殊字符)"/>
+                    <input type="password" id="reg-password" name="password" maxlength="20" tabindex="2" data-rule="password" class="reg-password input hide reg-input" />
+                </p>
+                <p class="reg-rpsw">
+                    <input type="text" id="reg-password2-s" name="password1" class="reg-password2 input placeholder" tabindex="3" maxlength="20" value="确认密码"/>
+                    <input type="password" id="reg-password2" name="password1" maxlength="20" tabindex="3" data-rule="eq" data-target="#reg-password" class="reg-password2 input hide reg-input"/>
+                </p>
+                <p class="reg-verify hide" id="reg-verify"><input tabindex="4" maxlength="4" type="text" name="safe_code" data-rule="code" class="input reg-verify-code notCheck" id="reg-verify-code" placeholder="请输入验证码"><img class="reg-verify-img" alt="点击更新验证码" title="点击更新验证码"></p>
+                <p class="sc"><span id="checkbox-agreement" class="ico checkbox checked"></span><a href="http://my.37.com/user_agreement.html" class="agreement a" target="_blank">阅读并同意<span class="blue">《用户注册服务协议及隐私政策》</span></a></p>
+                <p class="reg-btn"><a href="#" class="btn-reg btn btn-1" title="注册" id="btn-reg">注　册</a></p>
+                <p class="reg-link"><a id="btn-log-form" class="btn-log-short a" data-id="btn-log-form">返回登录</a></p>
+            </div>
+            <div class="input-alert recom-alert" id="recom-alert">
+                <ul class="input-alert-ul" id="recom-alert-ul">
+                    <li class="input-alert-li"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="reg-anth-form" class="form reg-form hide">
+            <div class="form-bg"></div>
+            <div class="form-p">
+                <p class="gary1 ac padding-t26">您还需要进行防沉迷认证，才能完成注册</p>
+                <p class="msg2" id="anth-msg" tabindex="-1">&nbsp;</p>
+                <p class="reg-usr">
+                    <input type="text" id="reg-real-name" name="reg-real-name" data-rule="required,hanzi" maxlength="20" data-message="请输入真实姓名,请输入真实姓名" class="reg-username input" tabindex="1" placeholder="请输入真实姓名"/>
+                </p>
+                <p class="reg-psw">
+                    <input type="text" id="reg-id" name="reg-id" maxlength="18" data-rule="required,card,card16" data-message="请输入身份证号,身份证号无效,未满16周岁无法注册" class="reg-username input" tabindex="2" placeholder="请输入身份证号"/>
+                </p>
+                <p class="reg-btn"><input type="button" id="btnAnth" class="btn-reg btn btn-1" value="认 证"> </p>
+                <p class="reg-link"><a href="javascript:;" class="fr blue1" id="btnPrev">上一步</a> <a href="javascript:;" id="btnBacklog" class="fl blue1">返回登录</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    var DefaultDataMeta = {
+            game_id: "{{$gameid}}",
+            installtime: "{{$installtime}}",
+            refer: "{{$refer}}",
+            uid: "{{$uid}}",
+            version: "{{$version}}",
+            showlogintype: "{{$showlogintype}}"
+        },
+        cookie_account = '{{$cookie_account}}';
+    </script>
+    <script data-main="/static/hz/js/modules/game.js?t=20190401143843VER" src="/static/hz/js/require.js"></script>
+{{include file="./footer.htm"}}
+</body>
+</html>

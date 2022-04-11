@@ -1,0 +1,15 @@
+源码模板：
+/Users/jiechen/37/projects/landers/template/main
+
+打包后模板：
+/Users/jiechen/37/web/common.tpl.37.com/landers/hz/main
+
+直接在打包后的模板下修改上传，最后再复制回源码模板以便维护
+
+源码资源：
+/Users/jiechen/37/projects/landers/hz
+
+打包后源码：
+/Users/jiechen/37/landers/landers.37.com/static/hz
+
+直接在打包后的源码下修改上传，最后再复制回源码源码以便维护

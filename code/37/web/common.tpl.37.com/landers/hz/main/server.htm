@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{$game_data.name}}</title>
+	<link rel="stylesheet" href="static/hz/css/server{{$game_data.serverStyle}}.css?t=20170502110110VER" />
+	<style type="text/css">
+	html,body{overflow: hidden;}
+    {{if $game_data.background}}
+		body {background:#{{$game_data.background}} url(http://img1.37wanimg.com/www/images/sets/{{$game_data.key}}/1920x1200.jpg) no-repeat center 0;}
+	{{else}}
+		body {background:#fff url(static/hz/css/images/default.jpg) no-repeat center 0;}
+	{{/if}}
+    </style>
+    {{data_content key='landerstogray' site_id='s_www' name='landerstogray'}}
+{{if $landerstogray["data"][0]["isserver"]==1}}<style type="text/css">html {filter: grayscale(100%); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); filter: url("data:image/svg+xml;utf8,#grayscale"); filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); -webkit-filter: grayscale(1);}</style>
+{{/if}}
+</head>
+<body class="tpl-{{$game_data["tplStyle"]}}">
+{{if $game_data["serverStyle"] eq "2"}}
+	<div class="bg"><div class="bg-bottom"></div></div>
+	<div class="bg-top"></div>
+	<div class="main">
+		{{assign var='block_kv'   value="{{$smarty.const.SQ_CONFIG_DATA_DIR}}/html/g_{{$game_id}}/html/client/game_landers/block_kv.html" }}
+		{{assign var='block_news' value="{{$smarty.const.SQ_CONFIG_DATA_DIR}}/html/g_{{$game_id}}/html/client/game_landers/block_news.html" }}
+		{{if ($block_kv|file_exists)}}
+		{{include file=$block_kv}}
+		{{/if}}
+		{{if ($block_news|file_exists)}}
+		{{include file=$block_news}}
+		{{/if}}
+
+	    <div class="choose">
+	    	<p class="text-p-f">选择服类型</p>
+	        <p class="choose-p"><span class="select-dom"><span class="select-con" id="st-select-con">{{if $game_data["server"]}}{{$game_data["server"][0]["server_type_name"]}}{{else}}双线{{/if}}</span><span class="select-btn" id="st-select-btn"></span></span></p>
+	        <p class="text-p">快速选服</p>
+	        <p class="choose-p"><span class="select-dom"><span class="select-con" id="ct-select-con"></span><span class="select-btn" id="ct-select-btn"></span></span></p>
+	        <p class="choose-p"><input name="server-fastin" class="server-fastin" id="server-fastin" type="text"/>
+	        <p class="text-p text-p-s">服</p>
+	        <p class="choose-p choose-btn"><a class="btn-fastin" id="btn-fastin" title="进入游戏">进入游戏</a></p>
+	    </div>
+	    <input type="hidden" id="server-begin-num" value="{{if $game_data["server"]}}{{if $game_data["serverType"] eq 4}}{{$game_data["server"][1]["server_begin_num"]}}{{else}}{{$game_data["server"][0]["server_begin_num"]}}{{/if}}{{else}}0{{/if}}"/>
+	    <input type="hidden" id="server-type" value="{{if $game_data["server"]}}{{if $game_data["serverType"] eq 4}}{{$game_data["server"][1]["server_type"]}}{{else}}{{$game_data["server"][0]["server_type"]}}{{/if}}{{else}}1{{/if}}"/>
+	    <div class="option-bg st-option-bg" id="st-option-bg">
+	    <ul class="option-dom st-option-dom" id="st-option-dom">
+	    {{foreach from=$game_data["server"] item=serT}}
+	    	<li data-type="{{$serT["server_type"]}}">{{$serT["server_type_name"]}}</li>
+		{{/foreach}}
+	    </ul>
+	    </div>
+	    <div class="option-bg ct-option-bg" id="ct-option-bg">
+	    {{foreach from=$game_data["server"] item=serT}}
+	    <ul class="option-dom ct-option-dom" id="option-dom-{{$serT["server_type"]}}"><li data-opt="{{$serT["server_begin_num"]}}" data-type="{{$serT["server_type"]}}">{{$serT["server_type_name"]}}</li></ul>
+	    {{/foreach}}
+	    </div>
+	    <div class="server-label" id="server-top">
+	        最近服务器
+	    </div>
+	    <div class="history-server" id="history-server">
+	    </div>
+		{{if $game_data["tplStyle"] eq ""}}
+		<div class="server-tab-wrap">
+			<div class="server-tab-bg" id="serverTabTitle">
+				<a href="javascript:;" class="s-btn-left"></a>
+				<div class="tab-title">
+					<div class="tab-title-list">
+						{{foreach from=$game_data["server"] item=serT}}
+						<a href="javascript:;"{{if $serT@first}} class="focus"{{/if}} data-tab="{{$serT["server_type"]}}">{{$serT["server_type_name"]}}</a>
+						{{foreachelse}}
+						<a href="javascript:;" data-tab="1" title="双线">双线</a>
+						{{/foreach}}
+					</div>
+				</div>
+				<p class="btn-wrap">
+					<a href="javascript:;" class="s-btn-right"></a>
+				</p>
+			</div>
+		</div>
+		{{else}}
+		<ul class="server-tab">
+			{{foreach from=$game_data["server"] item=serT}}
+			<li class="server-tab-{{$serT["server_type"]}}"><a{{if $serT@first}} class="focus"{{/if}} data-tab="{{$serT["server_type"]}}" title="{{$serT["server_type_name"]}}">{{$serT["server_type_name"]}}</a></li>
+			{{foreachelse}}
+			<li class="server-tab-1"><a data-tab="1" title="双线">双线</a></li>
+			{{/foreach}}
+		</ul>
+		{{/if}}
+	    <div class="server-con" id="all-server">
+	        <div class="server-list-p"></div>
+	    </div>
+	</div>
+{{else}}
+	<div class="bg"></div>
+	<div class="main main-{{$game_data["btnStyle"]}}">
+	    <div class="server-news-top relative">
+	        <div class="choose">
+	            <p class="choose-p"><span class="select-dom"><span class="select-con" id="select-con">{{if $game_data["server"]}} {{$game_data["server"][0]["server_type_name"]}} {{else}} 双线 {{/if}}</span><span class="select-btn" id="select-btn"></span></span></p>
+	            <p class="choose-p"><input name="server-fastin" class="server-fastin" id="server-fastin" type="text"/>
+	            <span class="choose-txt">服</span></p>
+	            <p class="choose-p choose-p-btn"><a class="btn-fastin" id="btn-fastin" title="进入游戏">进入游戏</a></p>
+	        </div>
+	        <input type="hidden" id="server-begin-num" value="{{if $game_data["server"]}} {{$game_data["server"][0]["server_begin_num"]}} {{else}} 0 {{/if}}"/>
+	        <input type="hidden" id="server-type" value=" {{$game_data["server"][0]["server_type"]|default:1}}"/>
+	        <ul class="server-news" id="news"></ul>
+	    </div>
+	    <div class="option-bg" id="option-bg">
+	    <ul class="option-dom" id="option-dom">
+	    {{foreach from=$game_data["server"] item=serT}}
+			<li data-opt="{{$serT["server_begin_num"]}}">{{$serT["server_type_name"]}}</li>
+		{{foreachelse}}
+			<li data-opt="0">双线</li>
+		{{/foreach}}
+	    </ul>
+	    </div>
+	    <div class="server-top" id="server-top">
+	        最近登录服务器：
+	    </div>
+	    <div class="server-con history-server" id="history-server">
+	    </div>
+	    <div class="server-top">
+	        全部服务器：
+	    </div>
+	    <div class="server-con all-server" id="all-server">
+	    </div>
+	    <div class="server-foot"></div>
+	</div>
+{{/if}}
+
+<script data-main="static/hz/js/modules/server.js?t=20170502110110VER" src="static/hz/js/require.js"></script>
+<script type="text/javascript">
+window.pageConfig={
+	gameid:"{{$game_id}}",
+	data:{
+        testTagShow: '{{$game_data.testTagShow|default:"0"}}',
+        isBigBtn: '{{$game_data.isBigBtn|default:"1"}}',
+        serverSub: '{{$game_data.serverSub|default:"0"}}',
+        gameName: '{{$game_data.name}}',
+        gameKey: '{{$game_data.key}}',
+        serverStyle: "{{$game_data["serverStyle"]}}",
+        tplStyle: "{{$game_data["tplStyle"]}}",
+        serverType: "{{$game_data["serverType"]}}",
+        serverTypeList: {{if $game_data["server"]}}{{$game_data["server"]|json_encode}}{{else}}null{{/if}}
+    }
+}
+</script>
+{{include file="./footer.htm"}}
+</body>
+</html>

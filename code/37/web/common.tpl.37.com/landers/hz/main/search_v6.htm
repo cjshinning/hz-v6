@@ -1,0 +1,212 @@
+{{include file="./header_v6.htm"}}
+		<div class="g-main fl" id="gMain">
+			<dl class="m-search-tab">
+				<dt>
+					<div class="search" id="gameSearch">
+						<input type="text" id="iptSearch" maxlength="20" placeholder="搜索游戏名">
+						<a href="javascript:;" class="btn">&nbsp;&nbsp;</a>
+					</div>
+					<span class="title1"><i></i>找游戏</span>
+				</dt>
+				<!--<dd id="searchTab" class="m-tab-panel clearfix">
+					<div class="m-tab-menu">
+
+					</div>
+					<ul class="m-tab-main"></ul>
+					<ul class="m-tab-main hide"></ul>
+					<ul class="m-tab-main hide"></ul>
+					<ul class="m-tab-main hide"></ul>
+					<ul class="m-tab-main hide"></ul>
+				</dd>-->
+				<!-- <dd id="searchTab" class="m-tab-panel-v2 clearfix">
+					<div class="m-tab-menu-v2">
+
+					</div>
+					<ul class="m-tab-main-v2"></ul>
+					<ul class="m-tab-main-v2 hide"></ul>
+					<ul class="m-tab-main-v2 hide"></ul>
+					<ul class="m-tab-main-v2 hide"></ul>
+					<ul class="m-tab-main-v2 hide"></ul>
+				</dd> -->
+			</dl>
+			<dl class="m-filter">
+				<dt id="filerBar">
+					<div class="m-nav-block" id="searchGameCate">
+						<div class="block-head">游戏类别： </div>
+						<div class="block-body" data-type="GAME_CATE">
+							<a href="javascript:;" class="focus" data-key="0">不限</a><a
+							href="javascript:;" data-key="1">网页游戏</a><a
+							href="javascript:;" data-key="2">移动游戏</a>
+						</div>
+					</div>
+					<div class="m-nav-block">
+						<div class="block-head">游戏类型： </div>
+						<div class="block-body" data-type="GAME_TYPE">
+							<a href="javascript:;" class="focus" data-key="0">不限</a><a
+							href="javascript:;" data-key="RPG">角色扮演</a><a
+							href="javascript:;" data-key="SLG">战争策略</a><a
+							href="javascript:;" data-key="SIM">模拟经营</a><a
+							href="javascript:;" data-key="SPT">休闲竞技</a><a
+							href="javascript:;" data-key="3D">3D</a>
+						</div>
+					</div>
+					<div class="m-nav-block">
+						<div class="block-head">游戏题材： </div>
+						<div class="block-body" data-type="GAME_THEME">
+							<a href="javascript:;" class="focus" data-key="0">不限</a><a
+							href="javascript:;" data-key="SANGUO">三国</a><a
+							href="javascript:;" data-key="XIYOU">西游</a><a
+							href="javascript:;" data-key="SHUIHU">水浒</a><a
+							href="javascript:;" data-key="XIANXIA">仙侠</a><a
+							href="javascript:;" data-key="WUXIA">武侠</a><a
+							href="javascript:;" data-key="MOHUAN">魔幻</a><a
+							href="javascript:;" data-key="DONGMAN">动漫</a><a
+							href="javascript:;" data-key="LISHI">历史</a><a
+							href="javascript:;" data-key="TIYU">体育</a><a
+							href="javascript:;" data-key="JUNSHI">军事</a><a
+							href="javascript:;" data-key="HANGHAI">航海</a><a
+							href="javascript:;" data-key="QITA">其它</a>
+						</div>
+					</div>
+					<div class="m-nav-block">
+						<div class="block-head">战斗形式： </div>
+						<div class="block-body" data-type="FIGHTING_MODE">
+							<a href="javascript:;" class="focus" data-key="0">不限</a><a
+							href="javascript:;" data-key="ROUND">回合</a><a
+							href="javascript:;" data-key="IMMEDIATE">即时</a><a
+							href="javascript:;" data-key="OTH">其它</a>
+						</div>
+					</div>
+					<div class="m-nav-block">
+						<div class="block-head">字母排序： </div>
+						<div class="block-body" data-type="GAME_PINYIN">
+							<a href="javascript:;" class="focus" data-key="0">不限</a><a
+							href="javascript:;" data-key="ABCDE">ABCDE</a><a
+							href="javascript:;" data-key="FGHIJK">FGHIJK</a><a
+							href="javascript:;" data-key="LMNOP">LMNOP</a><a
+							href="javascript:;" data-key="QRSTU">QRSTU</a><a
+							href="javascript:;" data-key="VWXYZ">VWXYZ</a>
+						</div>
+					</div>
+				</dt>
+				<dd class="clearfix">
+					<div class="m-filter-list2">
+						<!-- <div class="loading">
+                            <img src="http://img1.37wanimg.com/www/css/images/game_helper/loading.gif" alt="">
+                        </div> -->
+            <ul class="clearfix" id="searchResult">
+
+            </ul>
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</div>
+
+
+<div id="congfig" data-tgtime="60" style="display:none;"></div>
+<script type="text/javascript" src="http://ptres.37.com/content/s_www/gb_index_games.js"></script>
+
+<script data-main="static/hz/js/modules/search_v6.js?t=20200923164919VER" src="static/hz/js/require.js"></script>
+
+<script type="text/template" id="searchItem">
+  {% if (CATEGORY == 1){ %}
+  <li class="yy" data-category="{$CATEGORY}" data-ctype="{$CTYPE}" data-gameid="{$ID}" data-gamekey="{$GAME_KEY}" data-name="{$NAME}" data-position='{"e5":"37_box_search_v6_{$idx}","e9":"{$ID}"}'>
+    <div class="intro">
+        <div class="icon">
+            <img src="{$iconUrl}" alt="">
+        </div>
+        <div class="title">{$NAME}</div>
+        <div class="labels">
+            {% for(var i=0;i<themeLength;i++){ %} 
+            <span class="label-2">{%= theme[i] %}</span>
+            {% } %}
+        </div>
+        <i class="btn-start3 btn-start-v6" data-category="{$CATEGORY}" data-ctype="{$CTYPE}" data-gameid="{$ID}" data-gamekey="{$GAME_KEY}" data-name="{$NAME}">
+            开始游戏
+        </i>
+        <div class="marks">
+            {% if (tags == 'NEW'){ %}
+            <img src="/static/hz/css/images/label-new.png" alt="">
+            {% }else if (tags == 'HOT'){ %}
+            <img src="/static/hz/css/images/label-hot.png" alt="">
+            {% }else if (tags == 'GIFT'){ %}
+            <img src="/static/hz/css/images/label-gift.png" alt="">
+            {% } %}
+        </div>
+    </div>
+  </li>
+  {% }else if (CATEGORY == 2){ %}
+  <li class="sy" data-position='{"e5":"37_box_search_v6_{$idx}","e9":"{$ID}"}'>
+    <a href="{$HOME_URL}" target="blank">
+      <div class="intro">
+          <div class="icon">
+              <img src="{$iconUrl}" alt="">
+          </div>
+          <div class="title">{$NAME}</div>
+          <div class="labels">
+              {% for(var i=0;i<themeLength;i++){ %} 
+              <span class="label-2">{%= theme[i] %}</span>
+              {% } %}
+          </div>
+          <i class="btn-start3 btn-start-v6" data-category="{$CATEGORY}" data-ctype="{$CTYPE}" data-gameid="{$ID}" data-gamekey="{$GAME_KEY}" data-name="{$NAME}">
+              开始游戏
+              <div class="qr">
+                  <img src="{$qrImg}" alt="">
+                  <p>扫一扫 手机畅玩</p>
+              </div>
+            </i>
+      </div>
+    </a>
+  </li>
+  {% }else if (CATEGORY == 3){ %}
+  <li class="sy" data-position='{"e5":"37_box_search_v6_{$idx}","e9":"{$ID}"}'>
+    <a href="{$HOME_URL}" target="blank">
+      <div class="intro">
+          <div class="icon">
+              <img src="{$iconUrl}" alt="">
+          </div>
+          <div class="title">{$NAME}</div>
+          <div class="labels">
+              {% for(var i=0;i<themeLength;i++){ %} 
+              <span class="label-2">{%= theme[i] %}</span>
+              {% } %}
+          </div>
+          {% if (CTYPE == 101){ %}
+          <i class="btn-start3 btn-start-v6" data-category="{$CATEGORY}" data-ctype="{$CTYPE}" data-gameid="{$ID}" data-gamekey="{$GAME_KEY}" data-name="{$NAME}">
+              下载游戏
+              <div class="qr">
+                  <img src="{$qrImg}" alt="">
+                  <p>扫一扫 手机畅玩</p>
+              </div>
+          </i>
+          {% } else { %}
+          <i class="btn-start3 btn-start-v6" data-category="{$CATEGORY}" data-ctype="{$CTYPE}" data-gameid="{$ID}" data-gamekey="{$GAME_KEY}" data-name="{$NAME}">
+              开始游戏
+              <div class="qr">
+                  <img src="{$qrImg}" alt="">
+                  <p>扫一扫 手机畅玩</p>
+              </div>
+          </i>
+          {% } %}
+      </div>
+    </a>
+  </li>
+  {% } %}
+</script>
+
+<script type="text/template" id="searchItem2"><a href="{% if (CATEGORY == 1){ %}/index.php?c=hz-main&a=server&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=0&wd_GAME_ID={$ID}{% }else if (CATEGORY == 2){ %}http://game.{$HOSTS}/play_h5.php?game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}{% } %}" class="bg-search-filter" target="_blank" data-position='{"e5":"37_box_search","e9":"{$ID}"}'><img src="http://img1.37wanimg.com/www/images/sets/{$GAME_KEY}/229x170.jpg" alt=""><span class="game-name">{$NAME}</span><span class="{$mark}"></span></a></script>
+
+<script type="text/template" id="searchTopItem">
+<li>
+	<a href="{% if (CATEGORY == 1){ %}/index.php?c=hz-main&a=server&game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=0&wd_GAME_ID={$ID}&wd_actionid={$actionid}{% }else if (CATEGORY == 2){ %}http://game.{$HOSTS}/play_h5.php?game_id={$ID}&wd_NAME={$NAME_URL}&wd_GAME_KEY={$GAME_KEY}&wd_SID=1&wd_GAME_ID={$ID}&wd_actionid={$actionid}&wd_username={$account}&wd_SNAME={$SNAME}&wd_IsH5Game=1&wd_entergame=1&referer={$refer}&uid={$uid}{% } %}" class="game-pic f14 gray3" target="_blank" data-position='{"e5":"37_box_searchtop","e9":"{$ID}","e13":"{$photo_bid}"}'><img src="http://img1.37wanimg.com/www/images/client/default80.png" data-src="{$img}" alt=""><br><span class="game-name">{$NAME}</span></a>
+	<p class="panel-praise"><a href="javascript:;" class="icon-praise" data-id="{$ID}"><i>&nbsp;</i></a><span>{$GOOD_NUM}赞</span></p>
+</li>
+</script>
+
+<script type="text/javascript">
+var game_data = {{$game_data|json_encode}};
+</script>
+{{include file="./footer.htm"}}
+</body>
+</html>

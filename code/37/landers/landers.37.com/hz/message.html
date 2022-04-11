@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <title>微端</title>
+    <meta name="frontend" content="hanzh" />
+    <link rel="stylesheet" href="/static/hz/css/base.css?t=20180312180653VER" />
+    <link rel="stylesheet" href="/static/hz/css/message.css?t=20180312180653VER" />
+</head>
+<body>
+<div class="msg-bg">
+	<ul class="msg-header" id="msgHeader">
+		<li class="focus" data-k="1">
+			<a href="javascript:;" class="menu icon1">系统消息<span class="unread"></span></a><span class="msg-arrow"></span>
+		</li>
+		<li data-k="2">
+			<a href="javascript:;" class="menu icon2">活动速递<span class="unread"></span></a><span class="msg-arrow"></span>
+		</li>
+		<li data-k="4">
+			<a href="javascript:;" class="menu icon3">最新福利<span class="unread"></span></a><span class="msg-arrow"></span>
+		</li>
+		<li data-k="5">
+			<a href="javascript:;" class="menu icon4">安全提醒<span class="unread"></span></a><span class="msg-arrow"></span>
+		</li>
+	</ul>
+	<div class="msg-main">
+		<div class="msg-loading"></div>
+		<div class="msg-list"></div>
+	</div>
+</div>
+<script type="text/template" id="template_list">
+    <div class="msg-content" data-id="{$ID}">
+        <div class="msg-content-main">
+            {% if (LINK_URL){ %}<a href="{$LINK_URL}" class="" target="_blank" data-position='{"e5":"37-user-msg-{$MESSAGE_CLASS}","e11":"{$ID}"}'>{% } %}{MESSAGE_CONTENT}{% if (LINK_URL){ %}</a>{% } %}
+        </div>
+        <div class="msg-content-date"><a title="删除" href="javascript:;" class="msg-close">删除</a>{$MESSAGE_DATETIME}</div>
+    </div>
+</script>
+
+
+<script data-main="/static/hz/js/modules/message.js?t=20180312180653VER" src="/static/hz/js/require.js"></script>
+<script type="text/javascript" src="http://ptres.37.com/js/sq/plugin/preventHijack.min.js?t=201607260945"></script>
+<script type="text/javascript">
+	try{
+		setTimeout(function(){
+			check37Domain.init(1);
+		},5000);
+	}catch(e){}
+</script>
+
+</body>
+</html>

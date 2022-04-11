@@ -1,0 +1,818 @@
+@charset "UTF-8";
+/* function */
+/* line 17, ../sass/login.scss */
+.input {
+  height: 20px;
+  color: #3c3c3c;
+  line-height: 20px;
+  padding: 5px 9px;
+  z-index: 3;
+  border: none;
+  outline: none;
+}
+
+/* line 18, ../sass/login.scss */
+.placeholder {
+  color: #9c9c9c;
+}
+
+/* line 19, ../sass/login.scss */
+.a, .tries, .reg-now-btn, .forget-pw-btn, .forget, .log-verify-close {
+  color: #6c6c6c;
+}
+/* line 21, ../sass/login.scss */
+.a:hover, .tries:hover, .reg-now-btn:hover, .forget-pw-btn:hover, .forget:hover, .log-verify-close:hover {
+  color: #71b4ff;
+}
+/* line 22, ../sass/login.scss */
+.a:active, .tries:active, .reg-now-btn:active, .forget-pw-btn:active, .forget:active, .log-verify-close:active {
+  color: #206cc1;
+}
+
+/* line 25, ../sass/login.scss */
+.btn {
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  vertical-align: middle;
+  background: transparent url(images/login/l-btn.png?t=) no-repeat;
+  border: 0;
+}
+
+/* line 26, ../sass/login.scss */
+.btn-1 {
+  width: 240px;
+  height: 38px;
+  background-position: 0 0;
+  color: #fff;
+  font: 14px/38px "宋体";
+}
+/* line 28, ../sass/login.scss */
+.btn-1:hover {
+  background-position: 0 -38px;
+}
+/* line 29, ../sass/login.scss */
+.btn-1:active {
+  background-position: 0 -76px;
+}
+
+/* line 32, ../sass/login.scss */
+.ico {
+  display: inline-block;
+  background: transparent url(images/login/l-ico.png?t=) no-repeat;
+  _background-image: url(images/login/l-ico-8.png?t=);
+}
+
+/* line 33, ../sass/login.scss */
+.ico-2, .ico-2-focus {
+  width: 14px;
+  height: 14px;
+}
+
+/* line 34, ../sass/login.scss */
+.ico-2, .ico-2-focus {
+  background-position: 0 -40px;
+}
+/* line 36, ../sass/login.scss */
+.ico-2:hover, .ico-2-focus:hover {
+  background-position: 0 -60px;
+}
+/* line 37, ../sass/login.scss */
+.ico-2:active, .ico-2-focus:active {
+  background-position: 0 -80px;
+}
+
+/* line 39, ../sass/login.scss */
+.ico-2-focus {
+  background-position: 0 -80px;
+}
+
+/* line 40, ../sass/login.scss */
+.ico-3, .ico-3-focus {
+  width: 13px;
+  height: 13px;
+}
+
+/* line 41, ../sass/login.scss */
+.ico-3, .ico-3-focus {
+  background-position: 0 -160px;
+}
+
+/* line 42, ../sass/login.scss */
+.ico-3-focus {
+  background-position: 0 -180px;
+}
+
+/* line 44, ../sass/login.scss */
+.checkbox {
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  position: relative;
+  background-position: 0 -100px;
+}
+
+/* line 45, ../sass/login.scss */
+.checkbox-focus {
+  background-position: 0 -120px;
+}
+
+/* line 46, ../sass/login.scss */
+.checked {
+  background-position: 0 -140px;
+}
+
+/* line 48, ../sass/login.scss */
+.top-btn {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background: transparent url(images/login/l-top-btn.png?t=) no-repeat;
+  _background-image: url(images/login/l-top-btn-8.png?t=);
+  position: absolute;
+  top: 0;
+}
+
+/* line 49, ../sass/login.scss */
+.top-btn-min {
+  right: 28px;
+  background-position: 0 0;
+}
+/* line 52, ../sass/login.scss */
+.top-btn-min:hover {
+  background-position: 0 -60px;
+}
+
+/* line 54, ../sass/login.scss */
+.top-btn-close {
+  right: 0;
+  background-position: 0 -90px;
+}
+/* line 57, ../sass/login.scss */
+.top-btn-close:hover {
+  background-position: 0 -150px;
+}
+
+/* layout */
+/* line 61, ../sass/login.scss */
+html, body {
+  font: 12px/20px "宋体";
+  background: #ff80ff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 62, ../sass/login.scss */
+.container {
+  width: 320px;
+  height: 400px;
+  overflow: hidden;
+  background: url(images/login/l-bg.png) no-repeat;
+  position: relative;
+}
+
+/* line 64, ../sass/login.scss */
+.form {
+  width: 320px;
+  overflow: hidden;
+  position: relative;
+  background: url(images/login/l-radius.png) no-repeat 0 bottom;
+}
+
+/* line 65, ../sass/login.scss */
+.form-bg {
+  width: 320px;
+  background: #f7fbfe;
+  z-index: 1;
+  position: absolute;
+}
+
+/* 登录界面样式 */
+/* line 67, ../sass/login.scss */
+.log-form {
+  height: 248px;
+  margin: 152px 0 0;
+}
+/* line 69, ../sass/login.scss */
+.log-form .form-bg {
+  height: 243px;
+}
+/* line 71, ../sass/login.scss */
+.log-form p {
+  position: absolute;
+  left: 50%;
+  margin-left: -120px;
+}
+/* line 72, ../sass/login.scss */
+.log-form .msg {
+  top: 48px;
+}
+/* line 74, ../sass/login.scss */
+.log-form .hide-box {
+  display: none;
+}
+/* line 75, ../sass/login.scss */
+.log-form .input {
+  background: url(images/login/l-input-bg.png) no-repeat;
+}
+/* line 76, ../sass/login.scss */
+.log-form .input-focus {
+  background-image: url(images/login/l-input-f-bg.png);
+  z-index: 4;
+}
+/* line 77, ../sass/login.scss */
+.log-form .input-w {
+  background-image: url(images/login/l-input-w-bg.png);
+}
+/* line 78, ../sass/login.scss */
+.log-form .log-input {
+  position: absolute;
+  left: 50%;
+  margin-left: -120px;
+  width: 206px;
+  padding-left: 25px;
+}
+/* line 79, ../sass/login.scss */
+.log-form .log-username {
+  width: 192px;
+  padding: 5px 23px 5px 25px;
+  top: 70px;
+  background-position: 0 0;
+}
+/* line 80, ../sass/login.scss */
+.log-form .log-password {
+  top: 99px;
+  background-position: 0 -29px;
+}
+/* line 82, ../sass/login.scss */
+.log-form .ico-usr, .log-form .ico-psw {
+  width: 14px;
+  height: 14px;
+  background-position: 0 0;
+  position: absolute;
+  left: 46px;
+  top: 84px;
+  margin-top: -7px;
+  z-index: 4;
+}
+/* line 83, ../sass/login.scss */
+.log-form .ico-psw {
+  background-position: 0 -20px;
+  top: 113px;
+}
+/* line 85, ../sass/login.scss */
+.log-form .log-verify-code {
+  width: 130px;
+  padding: 4px 9px;
+  border: 1px solid #c5d0df;
+  border-radius: 3px;
+  margin-right: 4px;
+  background: #fff;
+}
+/* line 86, ../sass/login.scss */
+.log-form .log-verify {
+  margin: 0;
+  left: 40px;
+}
+/* line 12, ../sass/login.scss */
+.log-form .log-verify .input-focus {
+  border-color: #4883d7;
+}
+/* line 13, ../sass/login.scss */
+.log-form .log-verify .input-w {
+  border-color: #ed9ba2;
+}
+/* line 87, ../sass/login.scss */
+.log-form .loading-status {
+  width: 320px;
+  height: 190px;
+  background: #f7fbfe;
+  position: absolute;
+  top: 50px;
+  z-index: 5;
+  text-align: center;
+  display: none;
+}
+/* line 97, ../sass/login.scss */
+.log-form .loading-status .loading-text {
+  width: 320px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 24px;
+  color: #6c6c6c;
+  margin-top: 30px;
+  margin-left: 0;
+  left: 0;
+}
+
+/* line 110, ../sass/login.scss */
+.msg {
+  width: 240px;
+  z-index: 3;
+  text-align: center;
+  color: #f22637;
+  overflow: hidden;
+  height: 22px;
+}
+/* line 112, ../sass/login.scss */
+.msg:focus {
+  outline: none;
+}
+
+/* line 114, ../sass/login.scss */
+.info {
+  color: #3c3c3c;
+  padding-top: 26px;
+}
+
+/* line 118, ../sass/login.scss */
+.log-verify {
+  width: 240px;
+  height: 30px;
+  top: 70px;
+  padding: 10px 0 19px;
+  background: #f7fbfe;
+  z-index: 5;
+  overflow: hidden;
+}
+
+/* line 119, ../sass/login.scss */
+.log-verify-img, .reg-verify-img {
+  width: 86px;
+  height: 30px;
+}
+
+/* line 121, ../sass/login.scss */
+.log-checkbox {
+  width: 240px;
+  z-index: 3;
+  top: 130px;
+  _top: 135px;
+}
+/* line 125, ../sass/login.scss */
+.log-checkbox .checkbox {
+  padding-right: 5px;
+}
+
+/* line 127, ../sass/login.scss */
+.checkbox-a-rp {
+  margin-right: 110px;
+}
+
+/* line 129, ../sass/login.scss */
+.btn-log {
+  position: absolute;
+  left: 50%;
+  margin-left: -120px;
+  top: 160px;
+  z-index: 3;
+}
+
+/* line 130, ../sass/login.scss */
+.vc-btn-log {
+  top: 130px;
+}
+
+/* line 132, ../sass/login.scss */
+.log-link {
+  width: 240px;
+  z-index: 3;
+  top: 205px;
+}
+/* line 135, ../sass/login.scss */
+.log-link a {
+  height: 24px;
+  line-height: 24px;
+}
+
+/* line 140, ../sass/login.scss */
+.log-link-verify {
+  top: 175px;
+}
+
+/* line 141, ../sass/login.scss */
+.tries, .reg-now-btn, .forget-pw-btn, .forget, .log-verify-close {
+  float: left;
+  color: #46a1fc;
+}
+/* line 143, ../sass/login.scss */
+.tries:hover, .reg-now-btn:hover, .forget-pw-btn:hover, .forget:hover, .log-verify-close:hover {
+  text-decoration: underline;
+}
+/* line 144, ../sass/login.scss */
+.tries :active, .reg-now-btn :active, .forget-pw-btn :active, .forget :active, .log-verify-close :active {
+  text-decoration: underline;
+  color: #206cc1;
+}
+
+/* line 146, ../sass/login.scss */
+.reg-now-btn {
+  margin-right: 14px;
+}
+
+/* line 150, ../sass/login.scss */
+.forget-pw-btn {
+  float: right;
+}
+
+/* line 154, ../sass/login.scss */
+.forget, .log-verify-close {
+  float: left;
+}
+
+/* line 157, ../sass/login.scss */
+.show-alert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -46px 0 0 98px;
+  z-index: 4;
+}
+
+/* line 159, ../sass/login.scss */
+.input-alert {
+  position: absolute;
+  left: 50%;
+  margin-left: -120px;
+  width: 240px;
+  display: none;
+  overflow: hidden;
+  top: 99px;
+  z-index: 4;
+}
+
+/* line 160, ../sass/login.scss */
+.input-alert-ul {
+  width: 236px;
+  background: #fff;
+  border: 1px solid #4883d7;
+  padding: 1px;
+  overflow: hidden;
+}
+
+/* line 161, ../sass/login.scss */
+.input-alert-li {
+  width: 224px;
+  height: 32px;
+  padding: 6px;
+  color: #999;
+}
+/* line 163, ../sass/login.scss */
+.input-alert-li a.log-account {
+  width: 160px;
+  height: 32px;
+  display: block;
+  cursor: pointer;
+  float: left;
+  padding-left: 8px;
+  line-height: 32px;
+}
+
+/* line 165, ../sass/login.scss */
+.input-alert-avatar {
+  width: 32px;
+  height: 32px;
+  display: block;
+  cursor: pointer;
+  float: left;
+}
+/* line 166, ../sass/login.scss */
+.input-alert-avatar img {
+  width: 100%;
+}
+
+/* line 168, ../sass/login.scss */
+.input-alert-txt {
+  width: 224px;
+  height: 24px;
+  padding: 0 6px;
+  color: #3c3c3c;
+}
+
+/* line 169, ../sass/login.scss */
+.input-alert-hover {
+  background: #4883d7;
+  color: #fff;
+}
+
+/* line 170, ../sass/login.scss */
+.input-alert-del, .input-alert-close {
+  display: none;
+  float: right;
+  margin: 6px 8px 0 0;
+  cursor: pointer;
+}
+
+/* line 171, ../sass/login.scss */
+.input-alert-close {
+  display: block;
+}
+
+/* line 172, ../sass/login.scss */
+.input-alert-del {
+  margin: 9px 8px 0 0;
+}
+
+/* line 173, ../sass/login.scss */
+.input-alert-radio {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  margin-top: -6px;
+  background: url(../images/l-ico.png) no-repeat 0 -240px;
+}
+
+/* line 174, ../sass/login.scss */
+.input-alert-hover .input-alert-radio {
+  background-position: 0 -280px;
+}
+
+/* line 176, ../sass/login.scss */
+.avatar {
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  top: 106px;
+  left: 50%;
+  margin-left: -46px;
+  padding: 4px;
+  z-index: 5;
+}
+/* line 177, ../sass/login.scss */
+.avatar .avatar-img {
+  width: 84px;
+  height: 84px;
+}
+/* line 178, ../sass/login.scss */
+.avatar .avatar-mask {
+  width: 92px;
+  height: 92px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(images/login/l-mask.png) no-repeat;
+  _background-image: url(images/login/l-mask-8.png);
+}
+
+/* line 180, ../sass/login.scss */
+.hz_log_methods {
+  width: 24px;
+  height: 24px;
+  display: none;
+  float: right;
+  margin-left: 10px;
+  background: url("images/login/login_methods_icon.png") no-repeat left top;
+  _background: url("images/login/login_methods_icon_8.png") no-repeat left top;
+}
+
+/* line 189, ../sass/login.scss */
+.hz_log_methods:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+/* line 193, ../sass/login.scss */
+.hz_wx_type {
+  background-position: 0 -39px;
+}
+
+/* line 196, ../sass/login.scss */
+.hz_wb_type {
+  background-position: 0 -76px;
+}
+
+/* line 199, ../sass/login.scss */
+.reg-bg-icon {
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("images/login/l-reg-bg.png") center no-repeat;
+  _background-image: url("images/login/l-reg-bg8.png");
+}
+
+/* line 200, ../sass/login.scss */
+.reg-form {
+  overflow: hidden;
+  position: relative;
+  height: 370px;
+  margin: 30px 0 0;
+}
+/* line 203, ../sass/login.scss */
+.reg-form .reg-tab-box {
+  width: 320px;
+  height: 30px;
+  position: absolute;
+  top: 3px;
+  _top: 5px;
+  left: 0;
+  z-index: 4;
+  background: transparent url("images/login/reg-tab.png") no-repeat;
+  _background-image: url("images/login/reg-tab8.png");
+}
+/* line 205, ../sass/login.scss */
+.reg-form .reg-tab-box .reg-tab {
+  top: 0;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  color: #999999;
+  text-align: center;
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+}
+/* line 206, ../sass/login.scss */
+.reg-form .reg-tab-box .reg-tab-1 {
+  left: 40px;
+}
+/* line 207, ../sass/login.scss */
+.reg-form .reg-tab-box .reg-tab-2 {
+  left: 160px;
+}
+/* line 211, ../sass/login.scss */
+.reg-form .reg-tab-box1 {
+  background-position: 0 0;
+}
+/* line 213, ../sass/login.scss */
+.reg-form .reg-tab-box1 .reg-tab-1 {
+  color: #333333;
+}
+/* line 215, ../sass/login.scss */
+.reg-form .reg-tab-box2 {
+  background-position: 0 -39px;
+}
+/* line 217, ../sass/login.scss */
+.reg-form .reg-tab-box2 .reg-tab-2 {
+  color: #333333;
+}
+/* line 219, ../sass/login.scss */
+.reg-form .btn-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+/* line 222, ../sass/login.scss */
+.reg-form .form-bg {
+  height: 366px;
+}
+/* line 223, ../sass/login.scss */
+.reg-form .form-p {
+  width: 320px;
+  height: 360px;
+  z-index: 3;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+/* line 224, ../sass/login.scss */
+.reg-form .form-content {
+  width: 320px;
+  height: 360px;
+  z-index: 3;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  _top: -3px;
+}
+/* line 226, ../sass/login.scss */
+.reg-form p {
+  margin: 0 auto;
+  width: 250px;
+  padding-bottom: 3px;
+}
+/* line 227, ../sass/login.scss */
+.reg-form .msg {
+  padding-top: 55px;
+  height: 16px;
+  line-height: 16px;
+  width: 280px;
+}
+/* line 228, ../sass/login.scss */
+.reg-form .msg2 {
+  padding-top: 5px;
+  z-index: 3;
+  text-align: center;
+  color: #f22637;
+  overflow: hidden;
+  height: 22px;
+}
+/* line 229, ../sass/login.scss */
+.reg-form p.sc {
+  text-align: center;
+  padding-bottom: 5px;
+}
+/* line 232, ../sass/login.scss */
+.reg-form p.sc .checkbox {
+  margin-right: 5px;
+}
+/* line 233, ../sass/login.scss */
+.reg-form p.sc a {
+  font-size: 11px;
+}
+/* line 235, ../sass/login.scss */
+.reg-form .blue {
+  color: #71b4ff;
+}
+/* line 236, ../sass/login.scss */
+.reg-form .hasVerify {
+  padding-top: 5px;
+}
+/* line 237, ../sass/login.scss */
+.reg-form .input {
+  background: url("images/login/l-input-bg.jpg") no-repeat;
+  width: 220px;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0 5px;
+}
+/* line 238, ../sass/login.scss */
+.reg-form .reg-verify-code {
+  width: 130px;
+  margin-right: 2px;
+  background-image: url("images/login/l-input-bg-mini.jpg");
+}
+/* line 239, ../sass/login.scss */
+.reg-form .r-p-sendcode {
+  background-image: url("images/login/send-code-bg.png");
+  width: 86px;
+  height: 30px;
+  border: 0;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #333333;
+}
+/* line 240, ../sass/login.scss */
+.reg-form .pending {
+  color: #999;
+}
+/* line 241, ../sass/login.scss */
+.reg-form .input-focus {
+  background-position: 0 -30px;
+}
+/* line 242, ../sass/login.scss */
+.reg-form .input-w {
+  background-position: 0 -60px;
+}
+/* line 244, ../sass/login.scss */
+.reg-form .input-alert {
+  top: 100px;
+}
+/* line 245, ../sass/login.scss */
+.reg-form .input-alert-li {
+  height: 24px;
+  padding: 0 6px;
+}
+/* line 246, ../sass/login.scss */
+.reg-form .reg-btn {
+  padding-bottom: 3px;
+  text-align: center;
+}
+/* line 247, ../sass/login.scss */
+.reg-form .reg-link {
+  padding: 0 5px;
+  width: 240px;
+}
+/* line 248, ../sass/login.scss */
+.reg-form .reg-account {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 249, ../sass/login.scss */
+.reg-form .reg-account:hover {
+  background-color: #eee;
+}
+/* line 251, ../sass/login.scss */
+.reg-form .padding-t5 {
+  padding-top: 5px;
+}
+/* line 252, ../sass/login.scss */
+.reg-form .reg-recom-alert {
+  top: 88px;
+}
+/* line 253, ../sass/login.scss */
+.reg-form .msg-2 {
+  padding-top: 40px;
+}
+
+/* accredit page style */
+/* line 257, ../sass/login.scss */
+.accredit-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  float: left;
+}
+
+/* end */

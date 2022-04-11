@@ -1,0 +1,3943 @@
+/* $black:# */
+/* line 28, ../sass/main.scss */
+html {
+  overflow: hidden;
+}
+
+/* line 29, ../sass/main.scss */
+body {
+  height: 100%;
+  overflow: hidden;
+  *position: relative;
+  background-color: #f3f8fb;
+}
+
+/* layout */
+/* line 31, ../sass/main.scss */
+.wrapper {
+  width: 1440px;
+  *position: relative;
+}
+
+/* line 32, ../sass/main.scss */
+.g-aside {
+  background-color: #e5ecf3;
+  width: 290px;
+  padding: 0 15px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 33, ../sass/main.scss */
+.g-main {
+  background-color: #f3f8fb;
+  width: 1070px;
+  padding: 0 25px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* line 35, ../sass/main.scss */
+.g-ad-right {
+  position: absolute;
+  left: 1436px;
+  top: 3px;
+  display: block;
+  max-height: 968px;
+  max-width: 480px;
+  width: 100%;
+  height: 100%;
+  _height: 968px;
+  background-color: #f3f8fb;
+}
+/* line 42, ../sass/main.scss */
+.g-ad-right a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* module */
+/* line 49, ../sass/main.scss */
+.sq-tips {
+  height: 24px;
+  line-height: 24px;
+  border: 1px solid #46a1fc;
+  background-color: #fff;
+  font-size: 12px;
+  position: absolute;
+  padding: 2px 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 53, ../sass/main.scss */
+.m-played dt {
+  padding: 15px 0 10px 0;
+}
+/* line 54, ../sass/main.scss */
+.m-played dd {
+  text-align: center;
+}
+/* line 55, ../sass/main.scss */
+.m-played #played-page {
+  padding-bottom: 0;
+}
+/* line 56, ../sass/main.scss */
+.m-played .btn-del, .m-played .btn-del-hover {
+  display: block;
+  float: right;
+  _display: inline;
+}
+
+/* line 58, ../sass/main.scss */
+.m-played-games {
+  width: 303px;
+  height: 230px;
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+}
+/* line 60, ../sass/main.scss */
+.m-played-games .game-name {
+  font-size: 12px;
+  color: #6c6c6c;
+  line-height: 22px;
+  height: 22px;
+  width: 86px;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 63, ../sass/main.scss */
+.m-played-games a {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 86px;
+  height: 114px;
+  padding-right: 10px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+/* line 65, ../sass/main.scss */
+.m-played-games a .game-pic {
+  padding-top: 3px;
+  height: 86px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 67, ../sass/main.scss */
+.m-played-games a .game-pic img {
+  width: 80px;
+  height: 80px;
+}
+/* line 69, ../sass/main.scss */
+.m-played-games a .bg-played-bottom {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: absolute;
+  top: 68px;
+  left: 2px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #6c6c6c;
+}
+/* line 72, ../sass/main.scss */
+.m-played-games a .icon-del {
+  visibility: hidden;
+}
+/* line 74, ../sass/main.scss */
+.m-played-games a.inline-block {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 75, ../sass/main.scss */
+.m-played-games .hide {
+  display: none;
+}
+/* line 80, ../sass/main.scss */
+.m-played-games a:hover .game-name {
+  color: #2178fa;
+}
+/* line 87, ../sass/main.scss */
+.m-played-games a.game-search {
+  padding: 2px 0 0 0;
+  *padding: 2px 0 0 6px;
+  _padding: 2px 0 0 6px;
+  position: relative;
+  *top: -6px;
+}
+/* line 89, ../sass/main.scss */
+.m-played-games a.game-search .game-add {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  *margin-top: 3px;
+  *height: 82px;
+}
+/* line 90, ../sass/main.scss */
+.m-played-games a.game-search .game-name {
+  padding-top: 4px;
+}
+/* line 94, ../sass/main.scss */
+.m-played-games a.game-search:hover .game-name {
+  color: #2178fa;
+}
+
+/* line 101, ../sass/main.scss */
+.m-delete span.icon-del {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: absolute;
+  right: 14px;
+  top: 0;
+  visibility: visible;
+}
+
+/* line 103, ../sass/main.scss */
+.m-pager {
+  color: #9c9c9c;
+  height: 19px;
+  line-height: 19px;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+/* line 105, ../sass/main.scss */
+.m-pager a, .m-pager p {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+/* line 106, ../sass/main.scss */
+.m-pager p {
+  padding: 0 15px;
+}
+/* line 107, ../sass/main.scss */
+.m-pager .num {
+  color: #6c6c6c;
+}
+
+/* line 110, ../sass/main.scss */
+.m-server dt {
+  padding: 15px 0 10px 0;
+}
+
+/* line 112, ../sass/main.scss */
+.m-noticeboard {
+  border-top: 1px solid #d4dee5;
+  height: 26px;
+  line-height: 26px;
+  font-size: 12px;
+  color: #f22637;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 115, ../sass/main.scss */
+.m-slideshow {
+  width: 100%;
+  height: 270px;
+  position: relative;
+  padding-top: 15px;
+  overflow: hidden;
+}
+/* line 117, ../sass/main.scss */
+.m-slideshow .kv-imgs {
+  width: 671px;
+  height: 270px;
+  overflow: hidden;
+}
+/* line 119, ../sass/main.scss */
+.m-slideshow .kv-imgs li {
+  position: relative;
+  width: 671px;
+  height: 270px;
+  background: url(http://img1.37wanimg.com/www/css/images/common/loading-48x48.gif) no-repeat center;
+}
+/* line 122, ../sass/main.scss */
+.m-slideshow .kv-imgs li p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+  height: 80px;
+  font-size: 16px;
+  font-family: "Microsoft Yahei",Helvetica;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0, rgba(243, 248, 251, 0.95) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(243, 248, 251, 0.95)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0, rgba(243, 248, 251, 0.95) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0, rgba(243, 248, 251, 0.95) 100%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0, rgba(243, 248, 251, 0.95) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(243, 248, 251, 0.95) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#fef3f8fb', GradientType=0);
+}
+/* line 141, ../sass/main.scss */
+.m-slideshow .kv-imgs img {
+  width: 671px;
+  height: 270px;
+  vertical-align: top;
+}
+/* line 143, ../sass/main.scss */
+.m-slideshow .kv-thumbs {
+  width: 580px;
+  height: 42px;
+  position: absolute;
+  bottom: 0;
+  z-index: 200;
+  left: 50%;
+  margin: 0 0 0 -270px;
+  overflow: hidden;
+  text-align: center;
+}
+/* line 145, ../sass/main.scss */
+.m-slideshow .kv-thumbs ul {
+  width: 3000px;
+  height: 42px;
+}
+/* line 146, ../sass/main.scss */
+.m-slideshow .kv-thumbs li {
+  float: left;
+  _display: inline;
+  width: 106px;
+  height: 42px;
+  margin-right: 10px;
+}
+/* line 147, ../sass/main.scss */
+.m-slideshow .kv-thumbs li a {
+  display: block;
+  padding: 3px;
+  width: 100px;
+  height: 36px;
+}
+/* line 148, ../sass/main.scss */
+.m-slideshow .kv-thumbs li img {
+  width: 100px;
+  height: 36px;
+}
+/* line 149, ../sass/main.scss */
+.m-slideshow .kv-thumbs li img.loading {
+  width: auto;
+  height: 36px;
+}
+/* line 152, ../sass/main.scss */
+.m-slideshow .kv-thumbs li:hover a, .m-slideshow .kv-thumbs li.focus a {
+  padding: 0;
+  border: 3px solid #2178fa;
+}
+/* line 155, ../sass/main.scss */
+.m-slideshow .slide-icon-l, .m-slideshow .slide-icon-r {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  z-index: 500;
+  display: none;
+}
+/* line 156, ../sass/main.scss */
+.m-slideshow .slide-icon-l {
+  left: 24px;
+}
+/* line 157, ../sass/main.scss */
+.m-slideshow .slide-icon-r {
+  right: 24px;
+}
+
+/* line 159, ../sass/main.scss */
+.m-recommend {
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  z-index: 1000;
+}
+/* line 161, ../sass/main.scss */
+.m-recommend dt {
+  position: relative;
+  z-index: 1000;
+}
+
+/* line 159, ../sass/main.scss */
+.m-recommend-v6 {
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  z-index: 1000;
+}
+/* line 161, ../sass/main.scss */
+.m-recommend-v6 dt {
+  position: relative;
+  z-index: 1000;
+}
+
+/* line 163, ../sass/main.scss */
+.m-hotgames {
+  font-family: "Microsoft YaHei";
+  /* overflow: hidden; */
+  position: relative;
+  z-index: 10;
+  padding: 0 5px;
+}
+/* line 166, ../sass/main.scss */
+.m-hotgames dt {
+  padding: 0 0 15px 0;
+  position: relative;
+  z-index: 11;
+}
+/* line 167, ../sass/main.scss */
+.m-hotgames dd {
+  position: relative;
+  z-index: 12;
+}
+
+/* line 163, ../sass/main.scss */
+.m-hotgames-v6 {
+  font-family: "Microsoft YaHei";
+  /* overflow: hidden; */
+  position: relative;
+  z-index: 10;
+  padding: 0 5px;
+}
+/* line 166, ../sass/main.scss */
+.m-hotgames-v6 dt {
+  padding: 0 0 15px 0;
+  position: relative;
+  z-index: 11;
+}
+/* line 167, ../sass/main.scss */
+.m-hotgames-v6 dd {
+  position: relative;
+  z-index: 12;
+}
+
+/* line 170, ../sass/main.scss */
+.m-tab-tit {
+  width: 290px;
+  height: 28px;
+}
+/* line 172, ../sass/main.scss */
+.m-tab-tit a {
+  display: block;
+  float: left;
+  _display: inline;
+  line-height: 28px;
+  text-align: center;
+  color: #9c9c9c;
+  border: none;
+}
+/* line 173, ../sass/main.scss */
+.m-tab-tit a.tab-tit-l-hover, .m-tab-tit a.tab-tit-r-hover {
+  color: #3c3c3c;
+}
+
+/* line 175, ../sass/main.scss */
+.m-recommend-games2 {
+  width: 100%;
+  /* height: 504px; */
+  overflow: hidden;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+/* line 177, ../sass/main.scss */
+.m-recommend-games2 ul {
+  width: 681px;
+  position: relative;
+}
+/* line 178, ../sass/main.scss */
+.m-recommend-games2 li {
+  float: left;
+  _display: inline;
+  margin: 0 10px 20px 0;
+  position: relative;
+  background-image: url(/static/hz/images/tmp/bg-recom2.png);
+  width: 217px;
+  height: 242px;
+}
+/* line 180, ../sass/main.scss */
+.m-recommend-games2 li img {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 215px;
+  height: 186px;
+  z-index: 10;
+}
+/* line 181, ../sass/main.scss */
+.m-recommend-games2 li i {
+  font-style: normal;
+}
+/* line 182, ../sass/main.scss */
+.m-recommend-games2 li .panel-btn {
+  position: absolute;
+  left: 1px;
+  bottom: 4px;
+  width: 199px;
+  height: 42px;
+  padding: 8px 0 0 8px;
+  z-index: 20;
+  display: block;
+  _font-size: 13px;
+}
+/* line 183, ../sass/main.scss */
+.m-recommend-games2 li .panel-btn .title1 {
+  display: block;
+}
+/* line 184, ../sass/main.scss */
+.m-recommend-games2 li .panel-btn .gray1 {
+  padding-top: 3px;
+  display: block;
+}
+/* line 185, ../sass/main.scss */
+.m-recommend-games2 li .panel-btn .btn-start {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  _top: 10px;
+}
+/* line 188, ../sass/main.scss */
+.m-recommend-games2 .other-switch {
+  width: 70px;
+  height: 72px;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  z-index: 11;
+}
+/* line 196, ../sass/main.scss */
+.m-recommend-games2 .other-switch img {
+  width: 70px;
+  height: 72px;
+}
+/* line 201, ../sass/main.scss */
+.m-recommend-games2 .other {
+  display: none;
+}
+/* line 204, ../sass/main.scss */
+.m-recommend-games2 li:hover, .m-recommend-games2 li.hover {
+  position: relative;
+  left: -7px;
+  top: -7px;
+  margin-right: -4px;
+  background-image: url(/static/hz/images/tmp/bg-recom2-hover.png);
+  _background-image: url(/static/hz/images/tmp/bg-recom2-hover-8.png);
+  width: 231px;
+  height: 256px;
+  margin-bottom: 6px;
+}
+/* line 207, ../sass/main.scss */
+.m-recommend-games2 li:hover img, .m-recommend-games2 li.hover img {
+  left: 8px;
+  top: 8px;
+}
+/* line 208, ../sass/main.scss */
+.m-recommend-games2 li:hover .panel-btn, .m-recommend-games2 li.hover .panel-btn {
+  left: 8px;
+  bottom: 11px;
+}
+/* line 212, ../sass/main.scss */
+.m-recommend-games2 li:hover .other, .m-recommend-games2 li.hover .other {
+  display: block;
+}
+
+/* line 217, ../sass/main.scss */
+.m-recommend-games {
+  width: 100%;
+  height: 184px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+/* line 219, ../sass/main.scss */
+.m-recommend-games ul {
+  width: 681px;
+  position: relative;
+}
+/* line 220, ../sass/main.scss */
+.m-recommend-games li {
+  float: left;
+  _display: inline;
+  margin-right: 10px;
+  position: relative;
+}
+/* line 222, ../sass/main.scss */
+.m-recommend-games li img {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 215px;
+  height: 118px;
+  z-index: 10;
+}
+/* line 223, ../sass/main.scss */
+.m-recommend-games li i {
+  font-style: normal;
+}
+/* line 224, ../sass/main.scss */
+.m-recommend-games li .panel-btn {
+  position: absolute;
+  left: 1px;
+  bottom: 4px;
+  width: 199px;
+  height: 42px;
+  padding: 8px 0 0 8px;
+  z-index: 20;
+  display: block;
+  _font-size: 13px;
+}
+/* line 225, ../sass/main.scss */
+.m-recommend-games li .panel-btn .title1 {
+  display: block;
+}
+/* line 226, ../sass/main.scss */
+.m-recommend-games li .panel-btn .gray1 {
+  padding-top: 3px;
+  display: block;
+}
+/* line 227, ../sass/main.scss */
+.m-recommend-games li .panel-btn .btn-start {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  _top: 10px;
+  display: none;
+}
+/* line 230, ../sass/main.scss */
+.m-recommend-games li:hover, .m-recommend-games li.hover {
+  position: relative;
+  left: -7px;
+  top: -7px;
+  margin-right: -4px;
+}
+/* line 233, ../sass/main.scss */
+.m-recommend-games li:hover img, .m-recommend-games li.hover img {
+  left: 8px;
+  top: 8px;
+}
+/* line 234, ../sass/main.scss */
+.m-recommend-games li:hover .panel-btn, .m-recommend-games li.hover .panel-btn {
+  left: 8px;
+  bottom: 11px;
+}
+/* line 235, ../sass/main.scss */
+.m-recommend-games li:hover .panel-btn .btn-start, .m-recommend-games li.hover .panel-btn .btn-start {
+  display: block;
+}
+
+/* line 240, ../sass/main.scss */
+.server-page {
+  font-size: 12px;
+  color: #6c6c6c;
+  height: 218px;
+}
+/* line 242, ../sass/main.scss */
+.server-page li {
+  line-height: 28px;
+  height: 28px;
+  position: relative;
+  width: 290px;
+}
+/* line 243, ../sass/main.scss */
+.server-page li a, .server-page li span {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+/* line 244, ../sass/main.scss */
+.server-page li .name {
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+/* line 246, ../sass/main.scss */
+.server-page li .name img {
+  display: none;
+}
+/* line 248, ../sass/main.scss */
+.server-page li .num {
+  padding-left: 130px;
+  width: 72px;
+}
+/* line 250, ../sass/main.scss */
+.server-page li .btn-alert, .server-page li .btn3 {
+  display: none;
+}
+/* line 252, ../sass/main.scss */
+.server-page li.hover, .server-page li:hover {
+  height: 50px;
+  line-height: 50px;
+  color: #63aaeb;
+  width: 140px !important;
+  padding-left: 150px;
+}
+/* line 253, ../sass/main.scss */
+.server-page li.hover .name, .server-page li:hover .name {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 10px;
+  color: #63aaeb;
+}
+/* line 255, ../sass/main.scss */
+.server-page li.hover .name img, .server-page li:hover .name img {
+  display: inline;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  top: -1px;
+  _top: -2px;
+  margin-right: 5px;
+}
+/* line 257, ../sass/main.scss */
+.server-page li.hover .num, .server-page li:hover .num {
+  width: 70px;
+  color: #63aaeb;
+  height: 32px;
+  line-height: 32px;
+}
+/* line 258, ../sass/main.scss */
+.server-page li.hover .time, .server-page li:hover .time {
+  display: none;
+}
+/* line 259, ../sass/main.scss */
+.server-page li.hover .btn-alert, .server-page li.hover .btn3, .server-page li:hover .btn-alert, .server-page li:hover .btn3 {
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  display: block;
+  color: #fff;
+  text-indent: 26px;
+  padding: 0;
+  height: 18px;
+  line-height: 18px;
+}
+/* line 260, ../sass/main.scss */
+.server-page li.hover .btn3, .server-page li:hover .btn3 {
+  text-indent: 0;
+  text-align: center;
+}
+/* line 262, ../sass/main.scss */
+.server-page li span, .server-page li a, .server-page li.hover span, .server-page li.hover a {
+  height: 28px;
+  line-height: 28px;
+  color: #6c6c6c;
+}
+/* line 263, ../sass/main.scss */
+.server-page li.hover span, .server-page li.hover a {
+  padding: 11px;
+}
+
+/* line 267, ../sass/main.scss */
+.m-hot-list {
+  width: 681px;
+  _height: 544px;
+  overflow: hidden;
+  _position: relative;
+  *zoom: 1;
+}
+/* line 269, ../sass/main.scss */
+.m-hot-list a {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  height: 125px;
+  width: 217px;
+  padding: 1px 0 0 1px;
+  overflow: hidden;
+  margin: 0 6px 10px 0;
+  position: relative;
+}
+/* line 270, ../sass/main.scss */
+.m-hot-list a .btn-start {
+  display: none;
+  z-index: 10;
+}
+/* line 271, ../sass/main.scss */
+.m-hot-list a .txt-desc {
+  display: block;
+  margin-top: 8px;
+  line-height: 1.5;
+  z-index: 10;
+}
+/* line 272, ../sass/main.scss */
+.m-hot-list a img {
+  width: 215px;
+  height: 123px;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  z-index: 1;
+}
+/* line 274, ../sass/main.scss */
+.m-hot-list a.hover, .m-hot-list a:hover {
+  overflow: hidden;
+}
+/* line 275, ../sass/main.scss */
+.m-hot-list a.hover .btn-start, .m-hot-list a:hover .btn-start {
+  display: block;
+  line-height: 22px;
+  font-size: 12px;
+  margin-top: 13px;
+}
+/* line 276, ../sass/main.scss */
+.m-hot-list a.hover .txt-desc, .m-hot-list a:hover .txt-desc {
+  display: none;
+}
+/* line 278, ../sass/main.scss */
+.m-hot-list .txt {
+  position: absolute;
+  left: 10px;
+  top: 18px;
+  width: 100px;
+  height: 63px;
+  text-align: left;
+  z-index: 10;
+}
+/* line 279, ../sass/main.scss */
+.m-hot-list .txt i {
+  font-style: normal;
+}
+
+/* line 283, ../sass/main.scss */
+.m-mobilegames {
+  font-family: "Microsoft YaHei";
+  position: relative;
+  z-index: 10;
+  padding: 0 5px;
+}
+/* line 286, ../sass/main.scss */
+.m-mobilegames dt {
+  padding: 0 0 15px 0;
+  position: relative;
+  z-index: 11;
+}
+/* line 287, ../sass/main.scss */
+.m-mobilegames dd {
+  position: relative;
+  z-index: 12;
+}
+
+/* line 283, ../sass/main.scss */
+.m-mobilegames-v6 {
+  font-family: "Microsoft YaHei";
+  position: relative;
+  z-index: 10;
+  padding: 0 5px;
+}
+/* line 286, ../sass/main.scss */
+.m-mobilegames-v6 dt {
+  padding: 0 0 15px 0;
+  position: relative;
+  z-index: 11;
+}
+/* line 287, ../sass/main.scss */
+.m-mobilegames-v6 dd {
+  position: relative;
+  z-index: 12;
+}
+
+/* line 289, ../sass/main.scss */
+.m-mobile-list {
+  width: 681px;
+  _position: relative;
+  *zoom: 1;
+}
+/* line 291, ../sass/main.scss */
+.m-mobile-list .m-mobile-empty {
+  background-image: url(images/m-mobile-empty.png);
+  top: -3px;
+}
+
+/* line 293, ../sass/main.scss */
+.m-mobile-main {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  height: 102px;
+  width: 116px;
+  padding: 1px 0 0 101px;
+  margin: 0 10px 10px 0;
+  position: relative;
+  background: url(images/m-mobile-main.png) no-repeat;
+  float: left;
+}
+
+/* line 294, ../sass/main.scss */
+.m-mobile-main-h {
+  background-image: url(images/m-mobile-main-h.png);
+}
+
+/* line 295, ../sass/main.scss */
+.m-mobile-main img {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+
+/* line 296, ../sass/main.scss */
+.m-mobile-main h4 {
+  font-weight: normal;
+  height: 24px;
+  font-size: 14px;
+  padding-top: 12px;
+  color: #3c3c3c;
+  width: 117px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 297, ../sass/main.scss */
+.m-mobile-main h4 a {
+  overflow: hidden;
+  line-height: 20px;
+  color: #3c3c3c;
+}
+
+/* line 298, ../sass/main.scss */
+.m-mobile-main p {
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* line 299, ../sass/main.scss */
+.m-mobile-main .handgame-qrcode-content p {
+  height: auto;
+}
+
+/* line 300, ../sass/main.scss */
+.g-handgame-hide {
+  display: none;
+}
+
+/* line 301, ../sass/main.scss */
+.g-handgame-links {
+  padding-top: 5px;
+  height: 24px;
+}
+
+/* line 302, ../sass/main.scss */
+.g-handgame-btn {
+  width: 46px;
+  height: 18px;
+  display: inline;
+  border: 1px solid #cbcbcb;
+  background: #fff;
+  color: #333;
+  border-radius: 3px;
+  line-height: 18px;
+  text-align: center;
+  margin-right: 10px;
+  float: left;
+}
+
+/* line 303, ../sass/main.scss */
+.g-handgame-btn:hover {
+  border-color: #ffa403;
+  background: #ffa403;
+  color: #fff;
+}
+
+/* line 305, ../sass/main.scss */
+.handgame-qrcode {
+  position: absolute;
+  width: 140px;
+  height: 160px;
+  left: 208px;
+  top: -55px;
+  z-index: 10;
+  display: none;
+}
+
+/* line 306, ../sass/main.scss */
+.handgame-qrcode-content {
+  width: 138px;
+  height: 158px;
+  border: 1px solid #c7c7c7;
+  background-color: #fff;
+  border-radius: 3px;
+  float: left;
+  margin-left: 0;
+}
+
+/* line 307, ../sass/main.scss */
+.handgame-qrcode-content img {
+  width: 110px;
+  height: 110px;
+  display: block;
+  padding: 13px 14px 3px;
+  position: static;
+}
+
+/* line 308, ../sass/main.scss */
+.handgame-qrcode-content p {
+  text-align: center;
+  overflow: hidden;
+}
+
+/* line 309, ../sass/main.scss */
+.handgame-qrcode-content span {
+  color: #1ea6ff;
+}
+
+/* line 310, ../sass/main.scss */
+.handgame-qrcode-arrow {
+  float: left;
+  width: 11px;
+  position: relative;
+  z-index: 1;
+  height: 252px;
+}
+
+/* line 311, ../sass/main.scss */
+.handgame-qrcode-r {
+  left: 20px;
+}
+
+/* line 312, ../sass/main.scss */
+.handgame-qrcode-r .handgame-qrcode-arrow {
+  float: right;
+  margin-left: -1px;
+  z-index: 0;
+}
+
+/* line 313, ../sass/main.scss */
+.handgame-qrcode-r .handgame-qrcode-content {
+  margin: 0;
+}
+
+/* search */
+/* line 316, ../sass/main.scss */
+.m-search-tab {
+  position: relative;
+  z-index: 1000;
+}
+/* line 318, ../sass/main.scss */
+.m-search-tab dt {
+  padding: 10px 0 0;
+}
+
+/* line 320, ../sass/main.scss */
+.m-tab-panel {
+  position: relative;
+  padding-left: 99px;
+  height: 151px;
+  *z-index: -11;
+}
+
+/* line 321, ../sass/main.scss */
+.m-tab-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 98px;
+  text-align: center;
+  background-color: #fff;
+  border-top: 1px solid #eaeaea;
+  border-left: 1px solid #eaeaea;
+  /*.icon-sync{ display: inline-block; _display: inline; }*/
+}
+/* line 325, ../sass/main.scss */
+.m-tab-menu a * {
+  *cursor: pointer;
+}
+/* line 326, ../sass/main.scss */
+.m-tab-menu a {
+  display: block;
+  width: 98px;
+  height: 29px;
+  line-height: 29px;
+  color: #9c9c9c;
+  border-bottom: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+/* line 329, ../sass/main.scss */
+.m-tab-menu a.hover {
+  color: #333333;
+  border-right: none;
+}
+/* line 330, ../sass/main.scss */
+.m-tab-menu a.yellow1 {
+  color: #ffad1b;
+  _height: 21px;
+  _padding-top: 8px;
+}
+/* line 331, ../sass/main.scss */
+.m-tab-menu a.yellow1 em {
+  /*padding:1px; *padding:0px 6px;  overflow: hidden; position: relative;top:2px;*top:-8px;*/
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  margin-right: 0px;
+  margin-top: -2px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* line 339, ../sass/main.scss */
+.m-tab-menu a.yellow1 em i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 344, ../sass/main.scss */
+.m-tab-main {
+  width: 573px;
+  height: 149px;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  background-color: #fff;
+  *z-index: -10;
+}
+/* line 346, ../sass/main.scss */
+.m-tab-main li {
+  float: left;
+  _display: inline;
+  width: 142px;
+  height: 135px;
+  padding-top: 13px;
+  border-right: 1px solid #eaeaea;
+  text-align: center;
+}
+/* line 347, ../sass/main.scss */
+.m-tab-main .game-pic {
+  display: block;
+  padding-bottom: 2px;
+}
+/* line 349, ../sass/main.scss */
+.m-tab-main .game-pic img {
+  width: 80px;
+  height: 80px;
+  padding-bottom: 8px;
+}
+/* line 351, ../sass/main.scss */
+.m-tab-main .game-pic:hover {
+  color: #2178fa;
+}
+/* line 354, ../sass/main.scss */
+.m-tab-main .icon-praise {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin-right: 5px;
+  position: relative;
+}
+/* line 355, ../sass/main.scss */
+.m-tab-main .icon-praise i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 359, ../sass/main.scss */
+.m-tab-panel-v2 {
+  position: relative;
+  width: 669px;
+  height: 262px;
+  *z-index: -11;
+  border: 1px solid #eaeaea;
+}
+
+/* line 360, ../sass/main.scss */
+.m-tab-menu-v2 {
+  width: 100%;
+  height: 33px;
+  text-align: left;
+  background: url(images/bg-search-top-menu.png) repeat-x;
+}
+/* line 362, ../sass/main.scss */
+.m-tab-menu-v2 a * {
+  *cursor: pointer;
+}
+/* line 363, ../sass/main.scss */
+.m-tab-menu-v2 a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  width: 133px;
+  height: 33px;
+  line-height: 33px;
+  color: #9c9c9c;
+  font-size: 14px;
+  text-align: center;
+}
+/* line 366, ../sass/main.scss */
+.m-tab-menu-v2 a.hover, .m-tab-menu-v2 a:hover {
+  color: #3c3c3c;
+  font-weight: bold;
+  background-color: #fff;
+}
+/* line 367, ../sass/main.scss */
+.m-tab-menu-v2 a.rdm {
+  _height: 21px;
+  _padding-top: 8px;
+}
+/* line 368, ../sass/main.scss */
+.m-tab-menu-v2 a.rdm em {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  margin-right: 0px;
+  margin-top: -2px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* line 376, ../sass/main.scss */
+.m-tab-menu-v2 a.rdm em i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 380, ../sass/main.scss */
+.m-tab-main-v2 {
+  height: 203px;
+  padding: 13px 0 13px 14px;
+  background-color: #fff;
+  *z-index: -10;
+}
+/* line 382, ../sass/main.scss */
+.m-tab-main-v2 li {
+  float: left;
+  _display: inline;
+  text-align: center;
+  padding-right: 13px;
+  position: relative;
+}
+/* line 385, ../sass/main.scss */
+.m-tab-main-v2 .game-pic {
+  display: block;
+  padding-bottom: 2px;
+}
+/* line 387, ../sass/main.scss */
+.m-tab-main-v2 .game-pic img {
+  width: 150px;
+  height: 180px;
+  padding-bottom: 8px;
+}
+/* line 388, ../sass/main.scss */
+.m-tab-main-v2 .game-pic span {
+  font-size: 14px;
+  color: #3c3c3c;
+}
+/* line 390, ../sass/main.scss */
+.m-tab-main-v2 .game-pic:hover {
+  color: #2178fa;
+}
+/* line 392, ../sass/main.scss */
+.m-tab-main-v2 .game-pic:hover .game-name {
+  color: #2178fa;
+}
+/* line 394, ../sass/main.scss */
+.m-tab-main-v2 .panel-praise {
+  width: 84px;
+  height: 18px;
+  background: url(images/bg-search-praise-8.png) no-repeat;
+  position: absolute;
+  right: 16px;
+  bottom: 36px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+}
+/* line 398, ../sass/main.scss */
+.m-tab-main-v2 .icon-praise {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin-right: 5px;
+  position: relative;
+}
+/* line 399, ../sass/main.scss */
+.m-tab-main-v2 .icon-praise i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 404, ../sass/main.scss */
+.m-filter {
+  position: relative;
+  z-index: 100;
+  font-size: 12px;
+}
+/* line 406, ../sass/main.scss */
+.m-filter dt {
+  /* padding-top: 20px; */
+}
+/* line 407, ../sass/main.scss */
+.m-filter dd {
+  /* width: 674px; */
+  /* overflow: hidden; */
+}
+
+/* line 409, ../sass/main.scss */
+.m-nav-block {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+}
+/* line 411, ../sass/main.scss */
+.m-nav-block .block-head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 84px;
+  color: #6c6c6c;
+  text-indent: 5px;
+}
+/* line 412, ../sass/main.scss */
+.m-nav-block .block-body {
+  padding-left: 84px;
+}
+/* line 413, ../sass/main.scss */
+.m-nav-block .block-body a {
+  color: #9c9c9c;
+  margin-right: 1px;
+  padding: 1px 5px;
+}
+/* line 414, ../sass/main.scss */
+.m-nav-block .block-body a:hover {
+  background-color: #4a9eff;
+  color: #fff;
+}
+/* line 415, ../sass/main.scss */
+.m-nav-block .block-body .focus {
+  background-color: #4a9eff;
+  color: #fff;
+}
+
+/* line 419, ../sass/main.scss */
+.m-filter-list {
+  width: 680px;
+  padding-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 421, ../sass/main.scss */
+.m-filter-list .bg-search-filter {
+  position: relative;
+  margin: 0 12px 12px 0;
+  *margin: 0 6px 12px 0;
+  text-align: center;
+  padding-top: 3px;
+  height: 144px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 423, ../sass/main.scss */
+.m-filter-list .bg-search-filter .icon-new, .m-filter-list .bg-search-filter .icon-hot {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 424, ../sass/main.scss */
+.m-filter-list .bg-search-filter img {
+  width: 150px;
+  height: 111px;
+}
+/* line 426, ../sass/main.scss */
+.m-filter-list .bg-search-filter:hover {
+  padding-top: 3px;
+  height: 144px;
+}
+/* line 427, ../sass/main.scss */
+.m-filter-list .bg-search-filter:hover .game-name {
+  color: #2178fa;
+}
+/* line 429, ../sass/main.scss */
+.m-filter-list .game-name {
+  height: 29px;
+  line-height: 29px;
+  font-size: 14px;
+  color: #3c3c3c;
+  *display: block;
+}
+
+/* line 431, ../sass/main.scss */
+.nothing-text {
+  width: 350px;
+  height: 48px;
+  line-height: 48px;
+  margin: 109px auto;
+  padding: 0 0 0 50px;
+  background: url(images/icon.png) no-repeat;
+  color: #9e9e9e;
+  font: 24px/48px "Microsoft YaHei";
+}
+
+/* line 442, ../sass/main.scss */
+.m-nologin {
+  width: 290px;
+  height: 305px;
+  text-align: center;
+}
+/* line 444, ../sass/main.scss */
+.m-nologin img {
+  position: relative;
+  margin-bottom: 15px;
+  left: -18px;
+}
+/* line 445, ../sass/main.scss */
+.m-nologin .bg-login-btn {
+  margin: 0 auto;
+}
+/* line 447, ../sass/main.scss */
+.m-nologin .bg-login-btn a {
+  font-size: 12px;
+  color: #3c3c3c;
+  /* @include inline-block2; */
+  display: block;
+  width: 69px;
+  height: 29px;
+  line-height: 29px;
+}
+
+/* line 451, ../sass/main.scss */
+.m-gift {
+  width: 400px;
+  font-size: 12px;
+  color: #3c3c3c;
+  text-align: center;
+  padding: 10px 20px;
+}
+/* line 452, ../sass/main.scss */
+.m-gift .sel-wrap {
+  padding: 20px 0 25px 0;
+}
+/* line 453, ../sass/main.scss */
+.m-gift .c1 {
+  width: 52px;
+  padding-top: 5px;
+  border-bottom: none;
+}
+/* line 454, ../sass/main.scss */
+.m-gift .c2 {
+  width: 256px;
+  text-align: left;
+  border-bottom: none;
+}
+/* line 455, ../sass/main.scss */
+.m-gift .c3 {
+  padding-top: 12px;
+  padding-left: 30px;
+  border-bottom: none;
+}
+/* line 456, ../sass/main.scss */
+.m-gift li {
+  float: left;
+  _display: inline;
+}
+/* line 457, ../sass/main.scss */
+.m-gift .btn1 {
+  display: block;
+  line-height: 30px;
+  color: #3c3c3c;
+}
+/* line 458, ../sass/main.scss */
+.m-gift .btn1:hover {
+  color: #fff;
+}
+
+/* line 460, ../sass/main.scss */
+.m-gift-list {
+  position: relative;
+  width: 440px;
+  height: 370px;
+  overflow: hidden;
+}
+/* line 462, ../sass/main.scss */
+.m-gift-list li {
+  border-bottom: 1px solid #dddedf;
+}
+/* line 463, ../sass/main.scss */
+.m-gift-list li:hover {
+  background-color: #f9fbfd;
+}
+
+/* line 465, ../sass/main.scss */
+.m-autocomplete {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  width: 146px;
+  padding: 2px;
+  z-index: 10001;
+  background-color: #fff;
+}
+/* line 467, ../sass/main.scss */
+.m-autocomplete a.option {
+  display: block;
+  width: 146px;
+  height: 18px;
+  line-height: 18px;
+  color: #3c3c3c;
+}
+/* line 470, ../sass/main.scss */
+.m-autocomplete a.option:hover {
+  background: #319bf8;
+  color: #fff;
+}
+
+/* line 476, ../sass/main.scss */
+.tg-pop-bg {
+  background-color: #000;
+  filter: alpha(opacity=40);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: 19999;
+  width: 100%;
+  height: 100%;
+  _height: 2300px;
+}
+
+/* line 479, ../sass/main.scss */
+.tg-pop-panel {
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -350px;
+  z-index: 20000;
+  opacity: 1;
+  filter: not;
+  background: url(images/tg-bg-pop-3.jpg) no-repeat;
+}
+/* line 482, ../sass/main.scss */
+.tg-pop-panel .control {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 20001;
+  font-size: 14px;
+}
+/* line 484, ../sass/main.scss */
+.tg-pop-panel .control span {
+  color: #fff;
+  padding-right: 5px;
+}
+/* line 485, ../sass/main.scss */
+.tg-pop-panel .control .btn-close {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  text-indent: 24px;
+  font-size: 12px;
+  color: #000000;
+  line-height: 22px;
+}
+/* line 487, ../sass/main.scss */
+.tg-pop-panel .reg-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -145px 0 0 -158px;
+  overflow: hidden;
+}
+/* line 490, ../sass/main.scss */
+.tg-pop-panel .reg-form {
+  padding-top: 75px;
+  overflow: hidden;
+}
+/* line 492, ../sass/main.scss */
+.tg-pop-panel .reg-form p {
+  width: 313px;
+  height: 29px;
+  overflow: hidden;
+}
+/* line 493, ../sass/main.scss */
+.tg-pop-panel .reg-form .p-r-pwd {
+  padding: 4px 0 0;
+}
+/* line 494, ../sass/main.scss */
+.tg-pop-panel .reg-form p.reg-tip {
+  width: 214px;
+  height: 23px;
+  padding: 0 0 0 99px;
+  line-height: 23px;
+  color: #aa460f;
+}
+/* line 495, ../sass/main.scss */
+.tg-pop-panel .reg-form p.p-btn {
+  height: auto;
+  padding-top: 10px;
+  text-align: center;
+}
+/* line 496, ../sass/main.scss */
+.tg-pop-panel .reg-form label {
+  float: left;
+  display: inline-block;
+  width: 99px;
+  height: 29px;
+  text-indent: -999px;
+}
+/* line 497, ../sass/main.scss */
+.tg-pop-panel .reg-form input {
+  float: left;
+  width: 158px;
+  height: 20px;
+  padding: 5px 10px 4px;
+  background: none;
+  border: 0;
+  color: #fff;
+  line-height: 20px;
+}
+/* line 498, ../sass/main.scss */
+.tg-pop-panel .reg-form span.status {
+  display: none;
+  width: 0;
+  height: 28px;
+  float: left;
+}
+/* line 499, ../sass/main.scss */
+.tg-pop-panel .reg-form .ipt {
+  width: 158px;
+  height: 20px;
+  padding: 5px 10px 4px;
+  background: none;
+  border: 0;
+  color: #fff;
+  line-height: 20px;
+}
+/* line 500, ../sass/main.scss */
+.tg-pop-panel .reg-form .btn-enter {
+  text-indent: -999px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 503, ../sass/main.scss */
+.btn-close:hover {
+  background-image: url(images/sprite-tg.png);
+  _background-image: url(images/sprite-tg-8.png);
+  background-position: 0px 0px;
+  width: 58px;
+  height: 22px;
+}
+
+/* line 509, ../sass/main.scss */
+.btn-close {
+  background-image: url(images/sprite-tg.png);
+  _background-image: url(images/sprite-tg-8.png);
+  background-position: 0px -27px;
+  width: 58px;
+  height: 22px;
+}
+
+/* line 515, ../sass/main.scss */
+.btn-enter:hover {
+  background-image: url(images/sprite-tg.png);
+  _background-image: url(images/sprite-tg-8.png);
+  background-position: 0px -54px;
+  width: 248px;
+  height: 51px;
+}
+
+/* line 521, ../sass/main.scss */
+.btn-enter {
+  background-image: url(images/sprite-tg.png);
+  _background-image: url(images/sprite-tg-8.png);
+  background-position: 0px -110px;
+  width: 248px;
+  height: 51px;
+}
+
+/* line 527, ../sass/main.scss */
+.tg-bg-panel {
+  background-image: url(images/sprite-tg.png);
+  _background-image: url(images/sprite-tg-8.png);
+  background-position: 0px -166px;
+  width: 323px;
+  height: 315px;
+}
+
+/* line 534, ../sass/main.scss */
+.panel-gift {
+  width: 400px;
+  height: 450px;
+  position: relative;
+}
+/* line 536, ../sass/main.scss */
+.panel-gift .gift-box {
+  padding: 104px 0 0 39px;
+  height: 45px;
+  width: 360px;
+}
+/* line 538, ../sass/main.scss */
+.panel-gift .gift-box a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin-right: 3px;
+}
+/* line 541, ../sass/main.scss */
+.panel-gift .arrow1 {
+  left: 52px;
+}
+/* line 541, ../sass/main.scss */
+.panel-gift .arrow2 {
+  left: 102px;
+}
+/* line 541, ../sass/main.scss */
+.panel-gift .arrow3 {
+  left: 152px;
+}
+/* line 541, ../sass/main.scss */
+.panel-gift .arrow4 {
+  left: 202px;
+}
+/* line 541, ../sass/main.scss */
+.panel-gift .arrow5 {
+  left: 252px;
+}
+/* line 541, ../sass/main.scss */
+.panel-gift .arrow6 {
+  left: 302px;
+}
+/* line 541, ../sass/main.scss */
+.panel-gift .arrow7 {
+  left: 352px;
+}
+/* line 546, ../sass/main.scss */
+.panel-gift .gift-content {
+  height: 122px;
+  width: 331px;
+  padding: 18px 15px 0 54px;
+}
+/* line 550, ../sass/main.scss */
+.panel-gift .tg-btn-start {
+  display: block;
+  position: relative;
+  left: 110px;
+}
+/* line 555, ../sass/main.scss */
+.panel-gift .gift-name {
+  color: #ff5e26;
+  font-size: 14px;
+}
+/* line 556, ../sass/main.scss */
+.panel-gift .gift-detail {
+  color: #c5c5c5;
+  font-size: 12px;
+}
+/* line 557, ../sass/main.scss */
+.panel-gift .gift-icon-box {
+  width: 330px;
+  height: 45px;
+}
+/* line 558, ../sass/main.scss */
+.panel-gift .gift-icon {
+  width: 42px;
+  height: 42px;
+  margin-top: 3px;
+  position: relative;
+  float: left;
+  display: block;
+  margin-right: 3px;
+  font-size: 12px;
+  color: #fff;
+  background: #4E2160;
+}
+/* line 559, ../sass/main.scss */
+.panel-gift .gift-icon img {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 560, ../sass/main.scss */
+.panel-gift .gift-icon span {
+  top: 30px;
+  left: 30px;
+  position: absolute;
+}
+
+/* line 562, ../sass/main.scss */
+#arrow {
+  position: absolute;
+  top: 147px;
+}
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/* line 262, ../sass/_sprite-tg-3.scss */
+.arrow, .panel-gift .arrow1, .panel-gift .arrow2, .panel-gift .arrow3, .panel-gift .arrow4, .panel-gift .arrow5, .panel-gift .arrow6, .panel-gift .arrow7 {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -201px -284px;
+  width: 22px;
+  height: 15px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day1-hover {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -201px -218px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day1 {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -235px 0px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day2-hover {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -235px -66px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day2 {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -235px -132px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day3-hover {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: 0px -218px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day3 {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -67px -218px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day4-hover {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -134px -218px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day4 {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -134px -284px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day5-hover {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -302px 0px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day5 {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -302px -66px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day6-hover {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -302px -132px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day6 {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -302px -198px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day7-hover {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: 0px -284px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.day7 {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: -67px -284px;
+  width: 47px;
+  height: 46px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.tg-btn-start-hover {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: 0px -109px;
+  width: 215px;
+  height: 89px;
+}
+
+/* line 262, ../sass/_sprite-tg-3.scss */
+.tg-btn-start {
+  background-image: url(images/sprite-tg-3.png);
+  _background-image: url(images/sprite-tg-3-8.png);
+  background-position: 0px 0px;
+  width: 215px;
+  height: 89px;
+}
+
+/* unit */
+/* line 569, ../sass/main.scss */
+.title1, .title3 {
+  position: relative;
+  display: inline-block;
+  line-height: 27px;
+  color: #3c3c3c;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.title1 i{
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 3px;
+  height: 16px;
+  background: #2178fa;
+  overflow: hidden;
+}
+
+/* line 570, ../sass/main.scss */
+.title3 {
+  color: #9c9c9c;
+}
+
+/* line 571, ../sass/main.scss */
+.flash-panel {
+  width: 681px;
+  height: 252px;
+}
+
+/* line 572, ../sass/main.scss */
+.search {
+  float: right;
+  _display: inline;
+  /* padding: 0 0 0 10px; */
+  /* *padding: 3px 0 0 10px; */
+  position: relative;
+}
+/* line 574, ../sass/main.scss */
+.search input {
+  color: #3c3c3c;
+  font-size: 12px;
+  border: 0;
+  width: 150px;
+  height: 16px;
+  line-height: 16px;
+  background-color: #fff;
+  outline: none;
+  margin-left: 10px;
+}
+/* line 575, ../sass/main.scss */
+.search input.placeholder {
+  color: #cecece;
+}
+/* line 576, ../sass/main.scss */
+.search a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  width: 24px;
+  height: 16px;
+}
+
+/* line 578, ../sass/main.scss */
+.game-info {
+  width: 187px;
+  height: 80px;
+  padding: 15px;
+}
+/* line 580, ../sass/main.scss */
+.game-info span {
+  height: 24px;
+  line-height: 24px;
+}
+/* line 581, ../sass/main.scss */
+.game-info p {
+  float: left;
+  _display: inline;
+  width: 97px;
+}
+/* line 582, ../sass/main.scss */
+.game-info .hide {
+  display: none;
+}
+
+/* line 584, ../sass/main.scss */
+.u-left-ad {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+}
+/* line 585, ../sass/main.scss */
+.u-left-ad img {
+  width: 290px;
+  height: 120px;
+}
+
+/* line 588, ../sass/main.scss */
+.placeholder {
+  color: #cecece;
+}
+
+/* line 589, ../sass/main.scss */
+.gray1 {
+  /* line-height: 1.2; */
+  color: #9c9c9c;
+}
+
+/* line 590, ../sass/main.scss */
+.gray3 {
+  color: #3c3c3c;
+}
+
+/* line 591, ../sass/main.scss */
+.yellow1 {
+  color: #ffad1b;
+}
+
+/* line 592, ../sass/main.scss */
+.blue1 {
+  color: #2178fa;
+}
+
+/* line 593, ../sass/main.scss */
+.more {
+  font-size: 14px;
+  color: #a3a3a3;
+}
+
+/* line 594, ../sass/main.scss */
+.f14 {
+  font-size: 14px;
+}
+
+/* line 595, ../sass/main.scss */
+.f12 {
+  font-size: 12px;
+}
+
+/* line 596, ../sass/main.scss */
+.btn-start {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* line 597, ../sass/main.scss */
+.f12-bg-gray {
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #cacaca;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  padding: 2px;
+}
+
+/* line 598, ../sass/main.scss */
+.f18-gray {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  line-height: 28px;
+  height: 28px;
+}
+
+/* line 599, ../sass/main.scss */
+.f12-gray {
+  font-size: 12px;
+  color: #333333;
+}
+
+/* line 600, ../sass/main.scss */
+.f16-bold {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 601, ../sass/main.scss */
+.lh-20 {
+  line-height: 20px;
+}
+
+/* line 602, ../sass/main.scss */
+.h-bt {
+  font-size: 14px;
+  color: #9c9c9c;
+}
+
+/* line 603, ../sass/main.scss */
+.h-start {
+  font-size: 12px;
+  color: #999999;
+}
+
+/* line 604, ../sass/main.scss */
+.u-gift-sel, .u-gift-btn {
+  border: 1px solid #c5d0df;
+}
+
+/* line 605, ../sass/main.scss */
+.u-gift-sel {
+  width: 162px;
+  height: 28px;
+  line-height: 28px;
+}
+
+/* line 606, ../sass/main.scss */
+.u-gift-btn {
+  width: 108px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #fff;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+}
+
+/* line 607, ../sass/main.scss */
+.lh27 {
+  line-height: 27px;
+}
+
+/* line 608, ../sass/main.scss */
+.pdbtm10 {
+  padding-bottom: 10px;
+}
+
+/* line 609, ../sass/main.scss */
+.pdbtm15 {
+  padding-bottom: 15px;
+}
+
+/* line 610, ../sass/main.scss */
+a.hover {
+  color: #2178fa;
+}
+
+/* line 611, ../sass/main.scss */
+.icon-top {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  z-index: 1000;
+}
+
+/* line 612, ../sass/main.scss */
+.loading {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 613, ../sass/main.scss */
+img.loading2 {
+  width: 66px;
+  height: 66px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -33px 0 0 -33px;
+}
+
+/* sprite */
+/* line 2, ../sass/_sprite-main-0.scss */
+.bg-game-pic-hover, .m-played-games a:hover .game-pic, .bg-game-pic:hover, .m-played-games a .game-pic:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px 0px;
+  width: 86px;
+  height: 86px;
+}
+
+/* line 8, ../sass/_sprite-main-0.scss */
+.bg-game-pic, .m-played-games a .game-pic {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -91px;
+  width: 86px;
+  height: 86px;
+}
+
+/* line 14, ../sass/_sprite-main-0.scss */
+.bg-hot-bottom:hover, .bg-hot-bottom-hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -182px;
+  width: 215px;
+  height: 26px;
+}
+
+/* line 20, ../sass/_sprite-main-0.scss */
+.bg-hot-bottom {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -213px;
+  width: 215px;
+  height: 26px;
+}
+
+/* line 26, ../sass/_sprite-main-0.scss */
+.bg-hot-hover, .m-hot-list a.hover, .m-hot-list a:hover, .bg-hot:hover, .m-hot-list a:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -244px;
+  width: 217px;
+  height: 125px;
+}
+
+/* line 32, ../sass/_sprite-main-0.scss */
+.bg-hot, .m-hot-list a {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -374px;
+  width: 217px;
+  height: 125px;
+}
+
+/* line 38, ../sass/_sprite-main-0.scss */
+.bg-login-btn {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -504px;
+  width: 140px;
+  height: 29px;
+}
+
+/* line 44, ../sass/_sprite-main-0.scss */
+.bg-played-bottom:hover, .bg-played-bottom-hover, .m-played-games a:hover .bg-played-bottom {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -538px;
+  width: 82px;
+  height: 15px;
+}
+
+/* line 50, ../sass/_sprite-main-0.scss */
+.bg-played-bottom {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -558px;
+  width: 82px;
+  height: 15px;
+}
+
+/* line 56, ../sass/_sprite-main-0.scss */
+.bg-recommend:hover, .bg-recommend-hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -578px;
+  width: 217px;
+  height: 110px;
+}
+
+/* line 62, ../sass/_sprite-main-0.scss */
+.bg-recommend {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -693px;
+  width: 217px;
+  height: 110px;
+}
+
+/* line 68, ../sass/_sprite-main-0.scss */
+.bg-recommend2:hover, .m-recommend-games li:hover, .bg-recommend2-hover, .m-recommend-games li:hover, .m-recommend-games li.hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -808px;
+  width: 231px;
+  height: 184px;
+}
+
+/* line 74, ../sass/_sprite-main-0.scss */
+.bg-recommend2, .m-recommend-games li {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -997px;
+  width: 217px;
+  height: 170px;
+}
+
+/* line 80, ../sass/_sprite-main-0.scss */
+.bg-search-filter:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1172px;
+  width: 158px;
+  height: 147px;
+}
+
+/* line 86, ../sass/_sprite-main-0.scss */
+.bg-search-filter {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1324px;
+  width: 158px;
+  height: 147px;
+}
+
+/* line 92, ../sass/_sprite-main-0.scss */
+.server-page li.hover, .server-page li:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1476px;
+  width: 290px;
+  height: 50px;
+}
+
+/* line 98, ../sass/_sprite-main-0.scss */
+.btn-alert {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1531px;
+  width: 60px;
+  height: 18px;
+}
+
+/* line 104, ../sass/_sprite-main-0.scss */
+.btn-del-hover, .btn-del:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1554px;
+  width: 12px;
+  height: 12px;
+}
+
+/* line 110, ../sass/_sprite-main-0.scss */
+.btn-del {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1571px;
+  width: 12px;
+  height: 12px;
+}
+
+/* line 116, ../sass/_sprite-main-0.scss */
+.btn-start {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1588px;
+  width: 67px;
+  height: 22px;
+}
+
+/* line 122, ../sass/_sprite-main-0.scss */
+.btn1:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1615px;
+  width: 60px;
+  height: 30px;
+}
+
+/* line 128, ../sass/_sprite-main-0.scss */
+.btn1 {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1650px;
+  width: 60px;
+  height: 30px;
+}
+
+/* line 134, ../sass/_sprite-main-0.scss */
+.btn2 {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1685px;
+  width: 110px;
+  height: 34px;
+}
+
+/* line 140, ../sass/_sprite-main-0.scss */
+.btn3 {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1724px;
+  width: 60px;
+  height: 18px;
+}
+
+/* line 146, ../sass/_sprite-main-0.scss */
+.game-add:hover, .game-add-hover, .m-played-games a.game-search:hover .game-add {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1747px;
+  width: 82px;
+  height: 82px;
+}
+
+/* line 152, ../sass/_sprite-main-0.scss */
+.game-add {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1834px;
+  width: 82px;
+  height: 82px;
+}
+
+/* line 158, ../sass/_sprite-main-0.scss */
+.icon-del {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1921px;
+  width: 17px;
+  height: 17px;
+}
+
+/* line 164, ../sass/_sprite-main-0.scss */
+.icon-gift {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1943px;
+  width: 45px;
+  height: 43px;
+}
+
+/* line 170, ../sass/_sprite-main-0.scss */
+.icon-gift1 {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -1991px;
+  width: 45px;
+  height: 43px;
+}
+
+/* line 176, ../sass/_sprite-main-0.scss */
+.icon-gift2 {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2039px;
+  width: 45px;
+  height: 42px;
+}
+
+/* line 182, ../sass/_sprite-main-0.scss */
+.icon-gift3 {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2086px;
+  width: 45px;
+  height: 43px;
+}
+
+/* line 188, ../sass/_sprite-main-0.scss */
+.icon-hot {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2134px;
+  width: 38px;
+  height: 38px;
+}
+
+/* line 194, ../sass/_sprite-main-0.scss */
+.icon-new {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2177px;
+  width: 38px;
+  height: 38px;
+}
+
+/* line 200, ../sass/_sprite-main-0.scss */
+.icon-praise:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2220px;
+  width: 12px;
+  height: 12px;
+}
+
+/* line 206, ../sass/_sprite-main-0.scss */
+.icon-praise {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2237px;
+  width: 12px;
+  height: 12px;
+}
+
+/* line 212, ../sass/_sprite-main-0.scss */
+.icon-sync:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2254px;
+  width: 12px;
+  height: 12px;
+}
+
+/* line 218, ../sass/_sprite-main-0.scss */
+.icon-sync {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2271px;
+  width: 12px;
+  height: 12px;
+}
+
+/* line 224, ../sass/_sprite-main-0.scss */
+.icon-top:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2288px;
+  width: 44px;
+  height: 44px;
+}
+
+/* line 230, ../sass/_sprite-main-0.scss */
+.icon-top {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2337px;
+  width: 44px;
+  height: 44px;
+}
+
+/* line 236, ../sass/_sprite-main-0.scss */
+.page-l:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2386px;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 242, ../sass/_sprite-main-0.scss */
+.page-l-none {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2407px;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 248, ../sass/_sprite-main-0.scss */
+.page-l {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2428px;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 254, ../sass/_sprite-main-0.scss */
+.page-r:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2449px;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 260, ../sass/_sprite-main-0.scss */
+.page-r-none {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2470px;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 266, ../sass/_sprite-main-0.scss */
+.page-r {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2491px;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 272, ../sass/_sprite-main-0.scss */
+.search-hover, .search:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2512px;
+  width: 198px;
+  height: 24px;
+}
+
+/* line 278, ../sass/_sprite-main-0.scss */
+.search {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2541px;
+  width: 198px;
+  height: 24px;
+}
+
+/* line 284, ../sass/_sprite-main-0.scss */
+.slide-icon-l-hover, .slide-icon-l:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2570px;
+  width: 32px;
+  height: 40px;
+}
+
+/* line 290, ../sass/_sprite-main-0.scss */
+.slide-icon-l {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2615px;
+  width: 32px;
+  height: 40px;
+}
+
+/* line 296, ../sass/_sprite-main-0.scss */
+.slide-icon-r-hover, .slide-icon-r:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2660px;
+  width: 32px;
+  height: 40px;
+}
+
+/* line 302, ../sass/_sprite-main-0.scss */
+.slide-icon-r {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2705px;
+  width: 32px;
+  height: 40px;
+}
+
+/* line 308, ../sass/_sprite-main-0.scss */
+.tab-tit-l-hover, .tab-tit-l:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2750px;
+  width: 145px;
+  height: 28px;
+}
+
+/* line 314, ../sass/_sprite-main-0.scss */
+.tab-tit-l {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2783px;
+  width: 145px;
+  height: 28px;
+}
+
+/* line 320, ../sass/_sprite-main-0.scss */
+.tab-tit-r-hover, .tab-tit-r:hover {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2816px;
+  width: 145px;
+  height: 28px;
+}
+
+/* line 326, ../sass/_sprite-main-0.scss */
+.tab-tit-r {
+  background-image: url(images/sprite-main.png?v=2);
+  _background-image: url(images/sprite-main-8.png?v=2);
+  background-position: 0px -2849px;
+  width: 145px;
+  height: 28px;
+}
+
+
+/* v6版首页kv */
+.index-kv{
+  position: relative;
+  width: 1070px;
+  height: 334px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.index-kv .kv-img li{
+  width: 1070px;
+  height: 334px;
+}
+
+.index-kv .kv-img li a{
+  display: block;
+}
+
+.index-kv .kv-num {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+  height: 300px;
+  padding: 17px 0;
+  background: rgba(0,0,0,0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
+}
+
+.index-kv .kv-num li{
+  width: 150px;
+  height: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.index-kv .kv-num li.focus{
+  background: rgba(255,255,255,0.1);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff,endColorstr=#19ffffff);
+}
+
+.index-kv .kv-num li h3{
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  overflow: hidden;
+  font-size: 14px;
+  color: #d3d3d3;
+}
+
+.index-kv .kv-num li.focus h3{
+  height: 30px;
+  line-height: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.index-kv .kv-num li p{
+  height: 20px;
+  line-height: 20px;
+  padding-left: 30px;
+  overflow: hidden;
+  font-size: 12px;
+  color: #e7e7e7;
+}
+
+/* v6版首页推荐游戏 */
+.m-recommend-games3 ul {
+  zoom: 1;
+  margin-right: -20px;
+}
+
+.m-recommend-games3 li{
+  position: relative;
+  float: left;
+  margin: 0 18px 20px 0;
+  width: 250px;
+  height: 167px;
+  border: 1px solid #e0e1e5;
+  cursor: pointer;
+}
+
+.m-recommend-games3 li .mobile-app{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 167px;
+}
+
+.m-recommend-games3 li .pic{
+  width: 250px;
+  height: 167px;
+}
+
+.m-recommend-games3 li .intro{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 230px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 10px;
+  background: rgba(255,255,255,0.8);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C8ffffff,endColorstr=#C8ffffff);
+  overflow: hidden;
+  z-index: 20;
+}
+
+.m-recommend-games3 li .intro .title{
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: #525252;
+}
+
+.m-recommend-games3 li .intro .sub{
+  float: right;
+  font-size: 12px;
+  color: #6b6b6b;
+}
+
+.m-recommend-games3 li .intro .btn-start2{
+  display: none;
+  float: right;
+  width: 80px;
+  height: 20px;
+  background-image: url(images/sprite-main.png?v=2);
+  background-position: 0px -2882px;
+  margin-top: 7px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  font-style: normal;
+}
+
+.m-recommend-games3 li .marks{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 62px;
+  height: 65px;
+  z-index: 20;
+}
+
+.m-recommend-games3 li .mask{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 167px;
+  background: rgba(255,255,255,0.8);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C8ffffff,endColorstr=#C8ffffff);
+  z-index: 10;
+}
+
+.m-recommend-games3 li .mask p{
+  height: 20px;
+  line-height: 20px;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #3c3c3c;
+}
+
+.m-recommend-games3 li .mask img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.m-recommend-games3 li:hover{
+  border: 1px solid #ffaf22;
+}
+
+.m-recommend-games3 li:hover .mask{
+  display: block;
+}
+
+.m-recommend-games3 li:hover .intro .sub{
+  display: none;
+}
+
+.m-recommend-games3 li:hover .intro .btn-start2{
+  display: block;
+}
+
+/* v6版首页热门手游 */
+.m-mobile-list2 ul {
+  zoom: 1;
+  margin-right: -28px;
+}
+
+.m-mobile-list2 li{
+  position: relative;
+  float: left;
+  margin: 0 18px 20px 0;
+  width: 250px;
+  height: 272px;
+  border: 1px solid #e0e1e5;
+  /* cursor: pointer; */
+}
+
+.m-mobile-list2 li .pic{
+  width: 250px;
+  height: 178px;
+}
+
+.m-mobile-list2 li .mask{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 178px;
+  background: rgba(255,255,255,0.8);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C8ffffff,endColorstr=#C8ffffff);
+  z-index: 10;
+}
+
+.m-mobile-list2 li .mask p{
+  height: 20px;
+  line-height: 20px;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #3c3c3c;
+}
+
+.m-mobile-list2 li .mask img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 8px auto 0;
+  overflow: hidden;
+}
+
+.m-mobile-list2 li .intro{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 230px;
+  height: 84px;
+  padding: 10px 10px 0;
+  background: #fff;
+  z-index: 20;
+}
+
+.m-mobile-list2 li .intro .icon{
+  display: block;
+  float: left;
+  width: 64px;
+  height: 64px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.m-mobile-list2 li .intro .icon img{
+  width: 64px;
+  height: 64px;
+}
+
+.m-mobile-list2 li .intro .title{
+  height: 28px;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #525252;
+  overflow: hidden;
+}
+
+.m-mobile-list2 li .intro .title a{
+  color: #525252;
+}
+
+.m-mobile-list2 li .intro .sub{
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #a3a3a3;
+  overflow: hidden;
+}
+
+.m-mobile-list2 li .intro .labels{
+  height: 16px;
+  line-height: 16px;
+  margin-top: 4px;
+}
+
+.m-mobile-list2 li .intro .labels span{
+  display: block;
+  float: left;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 1px;
+  text-align: center;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.m-mobile-list2 li .intro .labels span.label-2{
+  width: 43px;
+  background: url(./images/label-2.png) no-repeat;
+}
+
+.m-mobile-list2 li .intro .labels span.label-3{
+  width: 55px;
+  background: url(./images/label-3.png) no-repeat;
+}
+
+.m-mobile-list2 li .intro .labels span.label-4{
+  width: 67px;
+  background: url(./images/label-4.png) no-repeat;
+}
+
+.m-mobile-list2 li .intro .btn-start2{
+  display: none;
+  width: 80px;
+  height: 20px;
+  background-image: url(images/sprite-main.png?v=2);
+  background-position: 0px -2882px;
+  margin-top: 24px;
+  margin-left: 84px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  font-style: normal;
+}
+
+
+.m-mobile-list2 li:hover{
+  border: 1px solid #ffaf22;
+}
+
+.m-mobile-list2 li:hover .mask{
+  display: block;
+}
+
+.m-mobile-list2 li:hover .intro{
+  height: 104px;
+}
+
+.m-mobile-list2 li:hover .intro .labels{
+  display: none;
+}
+
+.m-mobile-list2 li:hover .intro .btn-start2{
+  display: block;
+}
+
+/* v6版首页热门页游 */
+.m-hot-list2 ul {
+  zoom: 1;
+  margin-right: -28px;
+}
+
+.m-hot-list2 li{
+  position: relative;
+  float: left;
+  margin: 0 18px 20px 0;
+  width: 250px;
+  height: 123px;
+  border: 1px solid #e0e1e5;
+  cursor: pointer;
+}
+
+.m-hot-list2 li .pic{
+  /* position: absolute;
+  left: 0;
+  top: 0; */
+  width: 250px;
+  height: 123px;
+}
+
+
+.m-hot-list2 li .intro{
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 20px 10px 0;
+}
+
+.m-hot-list2 li .intro .title{
+  height: 28px;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #525252;
+  overflow: hidden;
+}
+
+.m-hot-list2 li .intro .sub{
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #a3a3a3;
+  overflow: hidden;
+}
+
+.m-hot-list2 li .intro .btn-start2{
+  display: none;
+  width: 80px;
+  height: 20px;
+  background-image: url(images/sprite-main.png?v=2);
+  background-position: 0px -2882px;
+  margin-top: 15px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  font-style: normal;
+}
+
+.m-hot-list2 li:hover{
+  border: 1px solid #ffaf22;
+}
+
+.m-hot-list2 li:hover .intro .btn-start2{
+  display: block;
+}
+
+.w-more{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 36px;
+  font-size: 18px;
+  color: #a3a3a3;
+}
+
+.w-more a{
+  color: #a3a3a3;
+}
+
+/* 右侧悬浮导航v6 */
+.float-nav{
+  position: fixed;
+  left: 1450px;
+  top: 50%;
+  margin-top: -93px;
+  width: 70px;
+  height: 176px;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #e0e1e5;
+  z-index: 9999;
+}
+
+.float-nav li{
+  position: relative;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.float-nav li a{
+  display: block;
+  color: #818181;
+}
+
+.float-nav li a .qr{
+  display: none;
+  position: absolute;
+  left: -150px;
+  top: -50%;
+  width: 148px;
+  height: 133px;
+  padding-top: 15px;
+  background: url(./images/float-qr.png) no-repeat;
+}
+
+.float-nav li .qr img{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.float-nav li .qr p{
+  line-height: 26px;
+  text-align: center;
+  font-size: 14px;
+  color: #818181;
+}
+
+
+.float-nav li a:hover{
+  background: #ececec;
+  color: #525252;
+}
+
+.float-nav li a:hover .qr{
+  display: block;
+}
+
+
+/* v6版页游kv */
+.web-kv{
+  position: relative;
+  width: 1070px;
+  height: 334px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.web-kv .kv-img li{
+  width: 1070px;
+  height: 334px;
+}
+
+.web-kv .kv-img li a{
+  display: block;
+}
+
+.web-kv .kv-num {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1070px;
+  height: 50px;
+  background: rgba(0,0,0,0.4);
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000,endcolorstr=#66000000);
+}
+
+.web-kv .kv-num ul{
+  zoom: 1;
+  margin-right: -4px;
+}
+
+.web-kv .kv-num li{
+  float: left;
+  width: 175px;
+  height: 50px;
+  margin-right: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
+}
+
+.web-kv .kv-num li.focus{
+  /* background: rgba(255,255,255,0.4);
+  filter:progid:DXImageTransform.Microsoft.gradient(enabled=true, GradientType = 0,startColorstr = '#e6fffff',endColorstr = '#e6fffff'); */
+}
+
+.web-kv .kv-num li h3{
+  line-height: 50px;
+  font-size: 14px;
+  color: #d3d3d3;
+}
+
+.web-kv .kv-num li i{
+  display: block;
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin: 9px 8px 0 10px;
+}
+
+.web-kv .kv-num li.focus h3{
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.web-cont{
+  margin-top: 20px;
+}
+
+.web-cont .m-hotgames-v6{
+  width: 810px;
+  float: left;
+}
+
+/* 页游开服列表 */
+.w-serverlist{
+  float: right;
+  width: 250px;
+}
+
+.w-title{
+  position: relative;
+  display: block;
+  line-height: 27px;
+  color: #3c3c3c;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.w-title i{
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 3px;
+  height: 16px;
+  background: #2178fa;
+  overflow: hidden;
+}
+
+.serverlist-container{
+  margin-top: 13px;
+  position: relative;
+}
+
+.serverlist-hd{
+  position: absolute;
+  right: 0;
+  top: -33px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.serverlist-hd span{
+  cursor: pointer;
+}
+
+.serverlist-hd span.focus{
+  color: #ffaf22;
+}
+
+.serverlist-bd{
+  width: 248px;
+  height: 426px;
+  margin-left: 2px;
+  overflow: hidden;
+}
+
+.serverlist-bd .pannel{
+}
+
+.serverlist-bd .pannel li{
+  width: 246px;
+  height: 48px;
+  margin-bottom: 8px;
+  border: 1px solid #f3f8fb;
+}
+
+/* .serverlist-bd .pannel li a{
+  display: block;
+  width: 246px;
+  height: 48px;
+  border: 1px solid #f3f8fb;
+} */
+
+.serverlist-bd .pannel li .time{
+  margin-left: 8px;
+  margin-top: 2px;
+  float: left;
+} 
+
+.serverlist-bd .pannel li .time p{
+  line-height: 22px;
+  text-align: center;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.serverlist-bd .pannel li .icon{
+  display: block;
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin: 8px 0 0 6px;
+}
+
+.serverlist-bd .pannel li .intro{
+  float: left;
+  width: 90px;
+  margin: 2px 0 0 6px;
+}
+
+.serverlist-bd .pannel li .intro h4, .serverlist-bd .pannel li .intro p{
+  height: 22px;
+  line-height: 22px;
+  overflow: hidden;
+}
+
+.serverlist-bd .pannel li .intro h4{
+  font-size: 14px;
+  color: #585858;
+}
+
+.serverlist-bd .pannel li .intro p{
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.serverlist-bd .pannel li .intro h4 a{
+  color: #585858;
+}
+
+.serverlist-bd .pannel li .intro p a{
+  color: #a3a3a3;
+}
+
+.serverlist-bd .pannel li .btn{
+  float: left;
+  width: 60px;
+  height: 20px;
+  margin: 14px 0 0 4px;
+}
+
+.serverlist-bd .pannel li .btn a{
+  display: block;
+  float: left;
+  width: 60px;
+  height: 20px;
+  margin: 14px 0 0 4px;
+}
+
+.serverlist-bd .pannel li .btn a.btn-clock{
+  background: url(./images/btn-clock.png) no-repeat;
+}
+
+.serverlist-bd .pannel li .btn a.btn-enter{
+  background: url(./images/btn-enter.png) no-repeat;
+}
+
+.serverlist-bd .pannel li:hover{
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #e0e1e5;
+}
+
+.serverlist-bd .web-pager{
+  margin-top: 10px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.serverlist-bd .web-pager a{
+  display: inline-block;
+  width: 16px;
+  height: 9px;
+  margin: 0 10px;
+  background-image: url(./images/btn-pager.png);
+  background-repeat: no-repeat;
+}
+
+.serverlist-bd .web-pager a.page-prev{
+  background-position: 0 0;
+}
+
+.serverlist-bd .web-pager a.page-next{
+  background-position: -17px 0;
+}
+
+.serverlist-bd .web-pager a:hover, .serverlist-bd .web-pager a.disabled{
+  background-image: url(./images/btn-pager.png);
+  background-repeat: no-repeat;
+}
+
+.serverlist-bd .web-pager a.page-prev:hover{
+  background-position: 0 -10px;
+}
+
+.serverlist-bd .web-pager a.page-next:hover{
+  background-position: -17px -10px;
+}
+
+.serverlist-bd .web-pager a.page-prev.disabled{
+  background-position: 0 -20px;
+}
+
+.serverlist-bd .web-pager a.page-next.disabled{
+  background-position: -17px -20px;
+}
+
+/* 手游v6 */
+.mobile-cont{
+  margin-top: 20px;
+}
+
+.mobile-kv{
+  width: 1062px;
+  height: 334px;
+  margin: 16px auto 0;
+}
+
+.mobile-kv .kv-main{
+  position: relative;
+  float: left;
+  width: 706px;
+  height: 334px;
+  overflow: hidden;
+}
+
+.mobile-kv .kv-main .kv-img li{
+  width: 706px;
+  height: 334px;
+}
+
+.mobile-kv .kv-main .kv-img li a{
+  display: block;
+}
+
+.mobile-kv .kv-main .kv-num {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  height: 10px;
+}
+
+.mobile-kv .kv-main .kv-num ul{
+  zoom: 1;
+  margin-right: -4px;
+}
+
+.mobile-kv .kv-main .kv-num li{
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url(./images/kv-circle.png) no-repeat;
+}
+
+.mobile-kv .kv-main .kv-num li.focus{
+  width: 24px;
+  background: url(./images/kv-circle-h.png) no-repeat;
+}
+
+.mobile-kv .kv-sider{
+  float: right;
+  width: 345px;
+}
+
+.mobile-kv .kv-sider .kv1{
+  display: block;
+  width: 345px;
+  height: 163px;
+  margin-bottom: 8px;
+}
+
+.mobile-kv .kv-sider .kv2{
+  display: block;
+  width: 345px;
+  height: 163px;
+}
+
+/* v6版手游列表 */
+.m-mobile-list-main ul {
+  zoom: 1;
+  margin-right: -28px;
+}
+
+.m-mobile-list-main li{
+  position: relative;
+  float: left;
+  margin: 0 18px 20px 0;
+  width: 340px;
+  height: 110px;
+  border: 1px solid #e0e1e5;
+  background: #fff;
+  cursor: pointer;
+}
+
+.m-mobile-list-main li a{
+  display: block;
+  width: 340px;
+  height: 110px;
+}
+
+
+.m-mobile-list-main li .intro{
+  padding: 10px 10px 0;
+}
+
+.m-mobile-list-main li .intro .icon{
+  display: block;
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.m-mobile-list-main li .intro .icon img{
+  width: 80px;
+  height: 80px;
+}
+
+.m-mobile-list-main li .intro .title{
+  height: 28px;
+  line-height: 28px;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #525252;
+  overflow: hidden;
+}
+
+.m-mobile-list-main li .intro .labels{
+  height: 16px;
+  line-height: 16px;
+  margin-top: 18px;
+}
+
+.m-mobile-list-main li .intro .labels span{
+  display: block;
+  float: left;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 7px;
+  text-align: center;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.m-mobile-list-main li .intro .labels span.label-2{
+  width: 43px;
+  background: url(./images/label-2.png) no-repeat;
+}
+
+.m-mobile-list-main li .intro .labels span.label-3{
+  width: 55px;
+  background: url(./images/label-3.png) no-repeat;
+}
+
+.m-mobile-list-main li .intro .labels span.label-4{
+  width: 67px;
+  background: url(./images/label-4.png) no-repeat;
+}
+
+.m-mobile-list-main li .intro .btn-start3{
+  position: absolute;
+  right: 18px;
+  top: 24px;
+  width: 80px;
+  height: 24px;
+  background-image: url(images/sprite-main.png?v=2);
+  background-position: 0px -2907px;
+  color: #6a6a6a;
+  font-size: 14px;
+  text-align: center;
+  line-height: 24px;
+}
+
+
+.m-mobile-list-main li .intro .btn-start3 .qr{
+  display: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -71px;
+  top: -163px;
+  width: 142px;
+  height: 143px;
+  padding-top: 15px;
+  background: url(./images/float-qr2.png) no-repeat;
+}
+
+.m-mobile-list-main li .intro .btn-start3 .qr img{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.m-mobile-list-main li .intro .btn-start3 .qr p{
+  line-height: 26px;
+  text-align: center;
+  font-size: 14px;
+  color: #818181;
+}
+
+.m-mobile-list-main li .intro .btn-start3:hover{
+  background-position: 0px -2936px;
+  color: #ffaf22;
+}
+
+.m-mobile-list-main li .intro .btn-start3:hover .qr{
+  display: block;
+}
+
+
+.m-mobile-list-main li:hover{
+  border: 1px solid #ffaf22;
+}
+
+
+.m-filter-list2 {
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  /* overflow: hidden; */
+  /* position: relative; */
+}
+
+
+/* v6版找游戏列表 */
+.m-filter-list2 ul {
+  position: relative;
+  zoom: 1;
+  margin-right: -28px;
+}
+
+.m-filter-list2 li{
+  position: relative;
+  float: left;
+  margin: 0 18px 20px 0;
+  *margin: 0 11px 20px 0;
+  width: 340px;
+  height: 110px;
+  border: 1px solid #e0e1e5;
+  background: #fff;
+  cursor: pointer;
+  list-style: none;
+}
+
+
+.m-filter-list2 li .intro{
+  padding: 10px 10px 0;
+}
+
+.m-filter-list2 li .intro .marks{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 62px;
+  height: 65px;
+  z-index: 20;
+}
+
+.m-filter-list2 li .intro .icon{
+  display: block;
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.m-filter-list2 li .intro .icon img{
+  width: 80px;
+  height: 80px;
+}
+
+.m-filter-list2 li .intro .title{
+  height: 28px;
+  line-height: 28px;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #525252;
+  overflow: hidden;
+}
+
+.m-filter-list2 li .intro .labels{
+  height: 16px;
+  line-height: 16px;
+  margin-top: 18px;
+}
+
+.m-filter-list2 li .intro .labels span{
+  display: block;
+  float: left;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 7px;
+  text-align: center;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.m-filter-list2 li .intro .labels span.label-2{
+  width: 43px;
+  background: url(./images/label-2.png) no-repeat;
+}
+
+.m-filter-list2 li .intro .labels span.label-3{
+  width: 55px;
+  background: url(./images/label-3.png) no-repeat;
+}
+
+.m-filter-list2 li .intro .labels span.label-4{
+  width: 67px;
+  background: url(./images/label-4.png) no-repeat;
+}
+
+.m-filter-list2 li .intro .server{
+  display: none;
+  height: 18px;
+  line-height: 18px;
+  margin-top: 17px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.m-filter-list2 li .intro .btn-start3{
+  position: absolute;
+  right: 18px;
+  top: 24px;
+  width: 80px;
+  height: 24px;
+  background-image: url(images/sprite-main.png?v=2);
+  background-position: 0px -2907px;
+  color: #6a6a6a;
+  font-size: 14px;
+  text-align: center;
+  line-height: 24px;
+}
+
+
+.m-filter-list2 li .intro .btn-start3 .qr{
+  display: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -71px;
+  top: -163px;
+  width: 142px;
+  height: 143px;
+  padding-top: 15px;
+  background: url(./images/float-qr2.png) no-repeat;
+}
+
+.m-filter-list2 li .intro .btn-start3 .qr img{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.m-filter-list2 li .intro .btn-start3 .qr p{
+  line-height: 26px;
+  text-align: center;
+  font-size: 14px;
+  color: #818181;
+}
+
+.m-filter-list2 li .intro .btn-start3:hover{
+  background-position: 0px -2936px;
+  color: #ffaf22;
+}
+
+.m-filter-list2 li.sy .intro .btn-start3:hover .qr{
+  display: block;
+}
+
+
+.m-filter-list2 li:hover{
+  border: 1px solid #ffaf22;
+}
+
+/* .m-filter-list2 li.sy .intro .labels, .m-filter-list2 li.yy .intro .server{
+  display: block;
+} */

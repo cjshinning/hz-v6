@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="zh" class="ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="zh" class="ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="zh" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="zh" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>礼包</title>
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta name="frontend" content="jqh" />
+    <link rel="stylesheet" href="/static/hz/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="/static/hz/css/main.css" type="text/css" />
+    <style>
+    .m-gift .getgift-no {color:#999;}
+    .m-gift .getgift-no:hover {color:#999;background-position: 0px -1650px;}
+    .h5cardline {display:none;}
+    .m-gift .h5card {color:#f00;}
+    .gl-not-img {
+	    width: 150px;
+	    margin: 40px auto 20px;
+	    text-align: center;
+	}
+
+	.gl-not-img img {
+	    width: 150px;
+	    height: 150px;
+	}
+
+	.gl-not-content {
+	    color: #999;
+	    text-align: center;
+	    font-size: 24px;
+	}
+    </style>
+</head>
+<body>
+	<ul class="m-gift-list" id="giftList" style="display:none">
+		<li>
+			<ul class="m-gift clearfix">
+				<li class="c1"><p class="icon-gift1"></p></li>
+				<li class="c2">
+					<p class="blue1 lh-20">新手礼包</p>
+					<p class="gray3" id="newbie">高额礼包 免费领取 增强实力 加速升级</p>
+				</li>
+				<li class="c3">
+					<a href="#" id="btnCopy" data-clipboard-target="showCard" data-clipboard-text="test" class="btn1 copy">复制</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div class="gl-not-gift f-hide" id="glNotGift" style="display:none">
+		<div class="gl-not-img"><img src="//img1.37wanimg.com/h5game/gamehelper/icon-game-nogift.png" alt=""></div>
+		<div class="gl-not-content">该游戏暂无礼包提供</div>
+	</div>
+
+<script data-main="/static/hz/js/modules/gift.js?t=20220307110013VER" src="/static/hz/js/require.js"></script>
+<script type="text/template" id="tmpGC">
+<li>
+	<ul class="m-gift clearfix">
+		<li class="c1"><p class="icon-gift2"></p></li>
+		<li class="c2">
+			<p class="blue1 lh-20">{$name}</p>
+			<p class="gray1">{$decription}</p>
+		</li>
+		<li class="c3"><a href="{$view_url}" class="btn1" target="_blank">领取</a></li>
+	</ul>
+</li>
+</script>
+<script type="text/template" id="tmpGS">
+<li>
+	<ul class="m-gift clearfix">
+		<li class="c1"><p class="icon-gift3"></p></li>
+		<li class="c2">
+			<p class="blue1 lh-20">{$GOODS_TITLE}</p>
+			<p class="gray1">{$GOODS_DESCRIPT}</p>
+		</li>
+		<li class="c3"><a href="{$URL}" class="btn1" target="_blank">兑换</a></li>
+	</ul>
+</li>
+</script>
+<script type="text/template" id="tmpH5G">
+<li>
+	<ul class="m-gift clearfix" data-giftid="{$id}">
+		<li class="c1"><p class="icon-gift2"></p></li>
+		<li class="c2">
+			<p class="blue1 lh-20">{$name}</p>
+			<p class="gray1">{$description}</p>
+		</li>
+		<li class="c3"><a href="{$view_url}" class="btn1 getgift {$class}" target="{$target}" data-giftid="{$id}" data-getmode="{$get_mode}" data-gameid="{$game_id}">{$text}</a></li>
+	</ul>
+</li>
+</script>
+    <p class="message-info hide" id="msgCopied">已复制到剪贴板</p>
+<script type="text/javascript" src="//ptres.37.com/js/sq/plugin/preventHijack.min.js?t=201607260945"></script>
+<script type="text/javascript">
+	try{
+		setTimeout(function(){
+			check37Domain.init(1);
+		},5000);
+	}catch(e){}
+</script>
+</body>
+</html>

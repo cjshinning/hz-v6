@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <title>微端</title>
+    <meta name="frontend" content="hanzh" />
+    <link rel="stylesheet" href="http://landers.37.com/static/hz/css/base.css?t=20171126101336VER" />
+    <link rel="stylesheet" href="http://landers.37.com/static/hz/css/login.css?t=20171126101336VER" />
+    <style type="text/css">
+    html,body{overflow: hidden; background: #fff;}
+    .container {width:440px;background:none;height:374px;}
+    .form {width:440px;background:url(http://landers.37.com/static/hz/css/images/login/r-radius.png) no-repeat 0 bottom;}
+    .reg-form {margin:0;height:375px; padding-bottom: 5px;}
+    .reg-form .form-bg {height: 0;}
+    .reg-form .form-p {width:378px;height:375px;padding:0 31px;background:#fff;overflow: hidden;}
+    .reg-form .form-content {width:378px;height:370px;padding:0 31px;background:#fff;overflow: hidden;}
+    .reg-form .reg-tab-box {width: 440px; height: 44px; position: absolute; top: 0; left: 0; z-index: 4; background: transparent url("http://landers.37.com/static/hz/css/images/login/reg-tab-2.png") no-repeat;}
+    .reg-form  .reg-tab-box .reg-tab {width: 200px; height: 44px; line-height: 44px;}
+    .reg-form  .reg-tab-box .reg-tab-1 {left: 10px;}
+    .reg-form  .reg-tab-box .reg-tab-2 {left: 230px;}
+    .reg-form .reg-tab-box1 {background-position: 0 0;}
+    .reg-form  .reg-tab-box2 {background-position: 0 -60px;}
+    .reg-form p {width:378px;overflow:hidden;}
+    .reg-form .msg {padding-top: 60px;height: 20px;line-height: 20px;}
+    .reg-form .msg-2 {padding-top: 50px;}
+    .reg-form label {width:90px;height:30px;float:left;line-height: 30px;padding:0 5px 0 0;color:#3c3c3c;text-align:right;}
+    .reg-form .input {float:left;}
+    .reg-form .btn-box {bottom:25px; width:440px;}
+    .reg-form p.sc {width:278px;padding-left:100px;text-align:left;}
+    .reg-form p.reg-btn {width:278px;padding-left:100px;height:34px;text-align:left;}
+    .btn-reg {width:150px;height:34px;margin-right:15px;background:url(http://landers.37.com/static/hz/css/images/login/reg-btn.png) no-repeat;line-height:34px;color:#3c3c3c;font-size:14px;}
+    .reg-form .btn-reg:hover {background-position: 0 0;}
+    .btn-log-short {color:#4d9ffb;}
+    .reg-form .input-alert {top:113px;margin-left:-89px;}
+    .reg-form .reg-recom-alert {top: 103px;}
+    #btnPrev{height: 34px;line-height: 34px;}
+    /*滚动条样式*/
+    .jspContainer{overflow:hidden;position:relative}.jspPane{position:absolute}.jspVerticalBar{position:absolute;top:0;right:0;width:9px;height:100%;background:red}.jspHorizontalBar{position:absolute;bottom:0;left:0;width:100%;height:16px;background:red}.jspCap{display:none}.jspHorizontalBar .jspCap{float:left}.jspTrack{background:#fff;position:relative}.jspDrag{background:#cbd0d5;position:relative;top:0;left:0;cursor:pointer;z-index:999;}.jspHorizontalBar .jspTrack,.jspHorizontalBar .jspDrag{float:left;height:100%}.jspArrow{background:#50506d;text-indent:-20000px;display:block;cursor:pointer;padding:0;margin:0}.jspArrow.jspDisabled{cursor:default;background:#80808d}.jspVerticalBar .jspArrow{height:16px}.jspHorizontalBar .jspArrow{width:16px;float:left;height:100%}.jspVerticalBar .jspArrow:focus{outline:0}.jspCorner{background:#eeeef4;float:left;height:100%}* html .jspCorner{margin:0 -3px 0 0}
+    </style>
+</head>
+<body>
+    <div class="container hide" id="mini-container">
+        <div id="log-form" class="hide"></div>
+        <div id="reg-form" class="form reg-form" data-alternate="true">
+            <div class="form-content" id="form-account">
+                <ul class="reg-tab-box reg-tab-box1" id="reg-tab-box1">
+                    <li class="reg-tab reg-tab-1 focus">帐号注册</li>
+                    <li class="reg-tab reg-tab-2">手机注册</li>
+                </ul>
+                <p class="msg " id="reg-msg" tabindex="-1">请您注册/登录后再进入游戏</p>
+                <p class="reg-usr">
+                    <label for="reg-username">用户帐号：</label>
+                    <input type="text" id="reg-username-s" name="login_account" class="reg-username input placeholder" tabindex="1" maxlength="20" value="帐号(4-20个数字、字母、下划线)"/>
+                    <input type="text" id="reg-username" name="login_account" class="reg-username input hide reg-input" tabindex="1" maxlength="20" data-rule="username"/>
+                </p>
+                <p class="reg-psw">
+                    <label for="reg-password">设置密码：</label>
+                    <input type="text" id="reg-password-s" name="password" class="reg-password input placeholder" tabindex="2" maxlength="20" value="密码(6-20个数字、字母、特殊字符)"/>
+                    <input type="password" id="reg-password" name="password" class="reg-password input hide reg-input" tabindex="2" maxlength="20" data-rule="password" data-target="#reg-username"/>
+                </p>
+                <p class="reg-rpsw">
+                    <label for="reg-password2">重复密码：</label>
+                    <input type="text" id="reg-password2-s" name="password1" class="reg-password2 input placeholder" tabindex="3" maxlength="20" value="确认密码"/>
+                    <input type="password" id="reg-password2" name="password1" class="reg-password2 input hide reg-input" tabindex="3" maxlength="20" data-rule="eq" data-target="#reg-password" />
+                </p>
+                <p class="reg-name-box">
+                    <label for="reg-name">真实姓名：</label>
+                    <input type="text" id="reg-name-s" name="reg-name" class="reg-name input placeholder" tabindex="4" maxlength="20" value="真实姓名"/>
+                    <input type="text" id="reg-name" name="reg-name" class="reg-name input hide reg-input" tabindex="4" maxlength="20" data-rule="realname" />
+                </p>
+
+                <p class="reg-card-box">
+                    <label for="reg-card">身份证号：</label>
+                    <input type="text" id="reg-card-s" name="reg-card" class="reg-card input placeholder" tabindex="5" maxlength="20" value="身份证号"/>
+                    <input type="text" id="reg-card" name="reg-card" class="reg-card input hide reg-input" tabindex="5" maxlength="20" data-rule="card"/>
+                </p>
+                <p class="reg-verify hide" id="reg-verify">
+                    <label for="reg-verify-code">验证码：</label><input type="text" id="reg-verify-code-s" name="safe_code" class="reg-verify-code input placeholder" tabindex="6" maxlength="4" value="请输入验证码"/><input type="text" id="reg-verify-code" name="safe_code" class="reg-verify-code input hide reg-input" tabindex="6" maxlength="4" data-rule="code"/><img class="reg-verify-img" alt="点击更新验证码" title="点击更新验证码">
+                </p>
+
+                <div class="btn-box">
+                    <p class="sc"><span id="checkbox-agreement" class="ico checkbox checked"></span><a href="http://my.37.com/user_agreement.html" class="agreement a" target="_blank">阅读并同意<span class="blue">《用户注册服务协议及隐私政策》</span></a></p>
+                    <p class="reg-btn"><a href="#" class="btn-reg btn btn-1" title="注册" id="btn-reg">注　册</a></p>
+                </div>
+                <div class="input-alert recom-alert" id="recom-alert">
+                    <ul class="input-alert-ul" id="recom-alert-ul">
+                        <li class="input-alert-li"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form-content" id="form-phone" style="display:none;">
+                <ul class="reg-tab-box reg-tab-box2" id="reg-tab-box2">
+                    <li class="reg-tab reg-tab-1">帐号注册</li>
+                    <li class="reg-tab reg-tab-2 focus">手机注册</li>
+                </ul>
+                <p class="msg " id="p-reg-msg" tabindex="-1">请您注册/登录后再进入游戏</p>
+                <p class="p-reg-usr">
+                    <label for="reg-phone">手机帐号：</label>
+                    <input type="text" id="reg-phone-s" name="login_account" tabIndex="1" maxlength="20" class="reg-phone input placeholder" value="手机号码"/>
+                    <input type="text" id="reg-phone" name="login_account"  tabIndex="1" maxlength="20" class="reg-phone input hide reg-input" data-rule="phone"/>
+                </p>
+                <p class="p-reg-verify" id="p-reg-verify">
+                    <label for="p-reg-verify-code">验证码：</label><input type="text" id="p-reg-verify-code-s" name="safe_code" maxlength="4" tabIndex="2" class="reg-verify-code input placeholder" value="验证码"/><input type="text" id="p-reg-verify-code" name="safe_code" maxlength="4" tabIndex="2" class="input reg-verify-code hide reg-input"/><img class="reg-verify-img" alt="点击更新验证码" title="点击更新验证码">
+                </p>
+                <p class="p-reg-code">
+                    <label for="r-p-verify-code">短信验证码：</label><input type="text" id="r-p-verify-code-s" name="verify_code" maxlength="6" tabIndex="3" class="reg-verify-code input placeholder" value="短信验证码"/><input type="text" id="r-p-verify-code"  name="verify_code" maxlength="6" tabIndex="3" class="input reg-verify-code hide reg-input" data-rule="vcode"/><button class="r-p-sendcode" id="r-sendcode" title="发送短信">发送短信</button>
+                </p>
+                <p class="p-reg-psw">
+                    <label for="p-reg-password">设置密码：</label>
+                    <input type="text" id="p-reg-password-s" name="password" tabindex="4" class="reg-password input placeholder" maxlength="20" value="密码(6-20个数字、字母、特殊字符)"/>
+                    <input type="password" id="p-reg-password" name="password" tabindex="4" class="reg-password input hide reg-input" maxlength="20" data-rule="password" data-target="#reg-phone"  />
+                </p>
+                <p class="reg-name-box">
+                    <label for="reg-name">真实姓名：</label>
+                    <input type="text" id="p-reg-name-s" name="reg-name" class="reg-name input placeholder" tabindex="4" maxlength="20" value="真实姓名"/>
+                    <input type="text" id="p-reg-name" name="reg-name" class="reg-name input hide reg-input" tabindex="4" maxlength="20" data-rule="realname" />
+                </p>
+
+                <p class="reg-card-box">
+                    <label for="reg-card">身份证号：</label>
+                    <input type="text" id="p-reg-card-s" name="reg-card" class="reg-card input placeholder" tabindex="5" maxlength="20" value="身份证号"/>
+                    <input type="text" id="p-reg-card" name="reg-card" class="reg-card input hide reg-input" tabindex="5" maxlength="20" data-rule="card"/>
+                </p>
+
+                <div class="btn-box">
+                    <p class="sc"><span id="p-checkbox-agreement" class="ico checkbox checked"></span><a href="http://my.37.com/user_agreement.html" class="agreement a" target="_blank">阅读并同意<span class="blue">《用户注册服务协议及隐私政策》</span></a></p>
+                    <p class="reg-btn"><a href="#" class="btn-reg btn btn-1" title="注册" id="p-btn-reg">注　册</a></p>
+                </div>
+            </div>
+        </div>
+        <div id="reg-anth-form" class="form reg-form hide">
+            <div class="form-bg"></div>
+            <div class="form-p">
+                <p class="gary1 ac padding-t26">您还需要进行防沉迷认证，才能完成注册</p>
+                <p class="msg2" id="anth-msg" tabindex="-1">&nbsp;</p>
+                <p class="reg-usr">
+                    <label for="reg-username">真实姓名：</label>
+                    <input type="text" id="reg-real-name" name="reg-real-name" class="reg-username input " tabindex="1" maxlength="20" data-rule="required,hanzi" data-message="请输入真实姓名,请输入真实姓名" placeholder="请输入真实姓名"/>
+                </p>
+                <p class="reg-usr">
+                    <label for="reg-username">身份证号：</label>
+                    <input type="text" id="reg-id" name="reg-id" class="reg-username input" tabindex="2" value="" maxlength="20" data-rule="required,card,card16" data-message="请输入身份证号,身份证号无效,未满16周岁无法注册" placeholder="请输入身份证号"/>
+                </p>
+                <p class="reg-btn padding-t10"><input type="button" id="btnAnth" class="btn-reg btn" value="认 证"> <a href="javascript:;" class="btn-log-short a" id="btnPrev">上一步</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+    var DefaultDataMeta = {
+            game_id: "{{$gameid}}",
+            installtime: "{{$installtime}}",
+            refer: "{{$refer}}",
+            uid: "{{$uid}}",
+            version: "{{if $version}}gb_{{$version}}{{/if}}",
+            showlogintype: "{{$showlogintype}}"
+        },
+        cookie_account = '{{$cookie_account}}';
+    </script>
+
+    <script data-main="/static/hz/js/modules/game.js?t=201712041645VER" src="/static/hz/js/require.js"></script>
+{{include file="./footer.htm"}}
+</body>
+</html>

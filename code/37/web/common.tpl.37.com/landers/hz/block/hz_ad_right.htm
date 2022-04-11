@@ -1,0 +1,6 @@
+{{data_game_list name='_game_list'}}{{data_content key='ty_bg_img' name='list'}}
+<div class="g-ad-right">
+	<a href="{{if $list.game_ids[0]}}{{if $list.links[0]}}{{$list.links[0]}}{{if $list.links[0]|strpos:'?' !== false}}&{{else}}?{{/if}}wd_actionid=154{{else}}{{if $_game_list[$list.game_ids[0]]['CATEGORY']==1}}index.php?c=hz-main&a=server&wd_actionid=154&game_id={{$list.game_ids[0]}}&wd_NAME={{$_game_list[$list.game_ids[0]]['NAME']|escape:'url'}}&wd_GAME_KEY={{$_game_list[$list.game_ids[0]]['GAME_KEY']}}&wd_SID=0&wd_GAME_ID={{$list.game_ids[0]}}{{else}}http://game.37.com/play_h5.php?wd_actionid=154&game_id={{$list.game_ids[0]}}&wd_NAME={{$_game_list[$list.game_ids[0]]['NAME']|escape:'url'}}&wd_GAME_KEY={{$_game_list[$list.game_ids[0]]['GAME_KEY']}}&wd_SID=1&wd_GAME_ID={{$list.game_ids[0]}}&wd_username=&wd_SNAME=H5游戏&wd_IsH5Game=1&wd_entergame=1&referer=ha_pt_37yyhz&uid=boxbkv{{/if}}{{/if}}{{else}}{{$list.links[0]}}{{if $list.links[0]|strpos:'?' !== false}}&{{else}}?{{/if}}wd_actionid=154{{/if}}" data-gameid="{{$list.game_ids[0]}}" target="_blank" data-position='{"e5":"37_box_bg","e9":"{{$list.game_ids[0]}}","e13":"{{$list.photo_bid[0]}}"}'>
+	    <img src="{{$_img1_url}}www/images/common/spacer.gif" data-src="{{$list.imgs[0]}}" alt="">
+	</a>
+</div>

@@ -1,0 +1,15 @@
+登录页：
+http://landers.37.com/index.php?c=hz-main&a=login&gameid=0&gamekey=gamebox&refer=37wanty&uid=&version=5000&installtime=20210326&runcount=64&mytoken=&curtime=20220223143747&channeltype=&gamedoctor=1&showlogintype=4
+
+首页：
+http://landers.37.com/index.php?c=hz-main&a=index&version=5000&showlogintype=4
+（http://landers.37.com/index.php?c=hz-main&a=index）
+
+找游戏：
+http://landers.37.com/index.php?c=hz-main&a=search
+
+选服页：
+http://landers.37.com/index.php?c=hz-main&a=server&game_id=790&wd_NAME=%E5%82%B2%E8%A7%86%E9%9C%B8%E4%B8%BB&wd_GAME_KEY=asbz&wd_SID=0&wd_GAME_ID=790&refer=37wanty&uid=&showlogintype=4
+
+消息弹窗：
+http://landers.37.com/hz/message.html
